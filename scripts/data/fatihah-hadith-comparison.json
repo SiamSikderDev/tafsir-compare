@@ -1,0 +1,538 @@
+{
+ "_note": "Al-Fatihah hadiths + per-verse comparison research notes. User approval pending (2026-10-13 morning). Hadith numbers cross-confirmed by multiple published sources; meanings are summaries not verbatim translations. H7 (Shia hadith) omitted - primary source not identified.",
+ "_verification": "No invented numbers. Uncertain items omitted per honesty rules.",
+ "hadiths": [
+  {
+   "bengaliTranslation": "আল্লাহ বলেছেন, তিনি সালাতকে নিজের ও বান্দার মধ্যে দুই ভাগে ভাগ করেছেন; বান্দা যা চাইবে তা পাবে। ফাতিহার প্রতিটি অংশের জবাবে আল্লাহ সাড়া দেন — প্রশংসা, মহিমা ঘোষণা, ইবাদত ও সাহায্য প্রার্থনার অঙ্গীকার, এবং হেদায়েত দান।",
+   "book": "",
+   "collectionName": "Sahih Muslim",
+   "englishTranslation": "Allah says He has divided the prayer between Himself and His servant into two halves, and the servant shall have what he asks for. Each part of Al-Fatihah draws a divine response: praise, extolment, glorification, the shared covenant of worship and help-seeking, and the granting of guidance.",
+   "grading": "Sahih",
+   "gradingSource": "Multiple published sources",
+   "hadithNumber": "395",
+   "key": "H1",
+   "narrator": "Abu Hurayrah",
+   "notes": "Meaning summarized from published secondary sources; not a verbatim translation. Number cross-confirmed by multiple sources (sunnah.com numbering).",
+   "school": "sunni",
+   "sourceUrl": "https://en.tohed.com/threads/40-authentic-hadiths-on-virtues-of-islamic-deeds.11216/"
+  },
+  {
+   "bengaliTranslation": "রাসূল ﷺ মসজিদ ত্যাগের আগে কুরআনের সর্বশ্রেষ্ঠ সূরা শেখানোর প্রতিশ্রুতি দিয়ে সূরা আল-ফাতিহাকে চিহ্নিত করেন — সাতটি বারবার পঠিত আয়াত (আস-সাব'উল-মাসানী) এবং তাঁকে প্রদত্ত মহান কুরআন।",
+   "book": "",
+   "collectionName": "Sahih al-Bukhari",
+   "englishTranslation": "The Prophet ﷺ promised to teach the greatest surah in the Quran before leaving the mosque, then identified it as 'Alhamdu lillahi Rabbil-alamin' — the seven oft-repeated verses (as-sab' al-mathani) and the Great Quran given to him.",
+   "grading": "Sahih",
+   "gradingSource": "abuaminaelias.com (citing al-Mundhiri)",
+   "hadithNumber": "5006",
+   "key": "H2",
+   "narrator": "Abu Sa'id ibn al-Mu'alla",
+   "notes": "Meaning summarized from published secondary sources; not a verbatim translation. Older prints number it 4474; 5006 is the sunnah.com numbering.",
+   "school": "sunni",
+   "sourceUrl": "https://www.abuaminaelias.com/al-mundhiri-surah-al-fatihah/"
+  },
+  {
+   "bengaliTranslation": "এক সাহাবী সূরা আল-ফাতিহা পড়ে এক গোত্রপ্রধানের চিকিৎসা করেন এবং তিনি সুস্থ হন। রাসূল ﷺ জিজ্ঞেস করেন, 'তুমি কীভাবে জানলে এটি রুকইয়া?' এবং প্রাপ্ত পারিশ্রমিক অনুমোদন করেন।",
+   "book": "",
+   "collectionName": "Sahih al-Bukhari",
+   "englishTranslation": "A companion recited Al-Fatihah over a tribe's chief who had been stung, and the man was cured. When asked about it, the Prophet ﷺ said, 'How did you know that it is a ruqyah?' and permitted them the payment they had received.",
+   "grading": "Sahih",
+   "gradingSource": "Multiple published sources",
+   "hadithNumber": "5736",
+   "key": "H3",
+   "narrator": "Abu Sa'id al-Khudri",
+   "notes": "Meaning summarized from published secondary sources; not a verbatim translation. Basis for the names ash-Shafiyah (the Healing) and al-Kafiyah (the Sufficing).",
+   "school": "sunni",
+   "sourceUrl": "https://sidrayasin.substack.com/p/seeking-cure-from-the-nature-pt-1"
+  },
+  {
+   "bengaliTranslation": "'যে ব্যক্তি ফাতিহাতুল কিতাব পড়ে না, তার সালাত হয় না।' প্রত্যেক রাকাতে ফাতিহা পড়া সালাতের অপরিহার্য অংশ হিসেবে প্রতিষ্ঠিত।",
+   "book": "",
+   "collectionName": "Sahih al-Bukhari",
+   "englishTranslation": "'There is no prayer for the one who does not recite the Opening of the Book.' Establishes reciting Al-Fatihah as an essential part of every rak'ah of prayer.",
+   "grading": "Sahih",
+   "gradingSource": "dorar.net",
+   "hadithNumber": "756",
+   "key": "H4",
+   "narrator": "Ubadah ibn as-Samit",
+   "notes": "Meaning summarized from published secondary sources; not a verbatim translation. Legal basis for the surah's obligatory recitation in prayer.",
+   "school": "sunni",
+   "sourceUrl": "https://dorar.net/en/ahadith?page=28&activeTab=panel-2&muslim-page=37"
+  },
+  {
+   "bengaliTranslation": "আকাশের নব-উন্মোচিত দরজা দিয়ে এক ফেরেশতা নেমে দুটি নূরের সুসংবাদ দেন, যা পূর্ববর্তী কোনো নবীকে দেওয়া হয়নি: ফাতিহাতুল কিতাব ও সূরা বাকারার শেষ আয়াতগুলো — এর কোনো অক্ষর পড়লেই তার কল্যাণ দেওয়া হয়।",
+   "book": "",
+   "collectionName": "Sahih Muslim",
+   "englishTranslation": "An angel descended from a newly opened door of heaven and gave glad tidings of two lights granted to no prophet before: the Opening of the Book (Al-Fatihah) and the last verses of al-Baqarah — no letter of them is recited except its benefit is granted.",
+   "grading": "Sahih",
+   "gradingSource": "abuaminaelias.com, imamghazali.org",
+   "hadithNumber": "806",
+   "key": "H5",
+   "narrator": "Ibn Abbas",
+   "notes": "Meaning summarized from published secondary sources; not a verbatim translation. Confirmed by two independent sources.",
+   "school": "sunni",
+   "sourceUrl": "https://www.abuaminaelias.com/dailyhadithonline/2021/04/27/fatihah-baqarah-descend/"
+  },
+  {
+   "bengaliTranslation": "রাসূল ﷺ উবাইকে জিজ্ঞেস করেন সালাতে কী পড়েন; তিনি ফাতিহা পড়েন। রাসূল ﷺ বলেন, তাওরাত, ইনজিল, যাবুর বা ফুরকানে এর মতো কিছু নাজিল হয়নি — এটি সাতটি বারবার পঠিত আয়াত ও তাঁকে প্রদত্ত মহান কুরআন।",
+   "book": "",
+   "collectionName": "Sunan at-Tirmidhi",
+   "englishTranslation": "The Prophet ﷺ asked Ubayy what he recites in prayer; he recited Al-Fatihah. The Prophet ﷺ said nothing like it was revealed in the Torah, Gospel, Psalms, or the Furqan — it is the seven oft-repeated verses and the mighty Quran given to him.",
+   "grading": "Hasan Sahih",
+   "gradingSource": "at-Tirmidhi; also Musnad Ahmad 2/357",
+   "hadithNumber": "2875",
+   "key": "H6",
+   "narrator": "Ubayy ibn Ka'b",
+   "notes": "Meaning summarized from published secondary sources; not a verbatim translation.",
+   "school": "sunni",
+   "sourceUrl": "https://en.tohed.com/threads/the-unmatched-virtues-of-surah-al-fatihah-in-authentic-hadith.11489/"
+  }
+ ],
+ "researchNotes": [
+  {
+   "ayah": 1,
+   "language": "english",
+   "title": "1:1 — The Basmalah: Sunni–Shia comparison",
+   "sunniView": "Ibn Kathir records that the Companions began the Book of Allah with the Bismillah, and documents disagreement over whether it is a verse of Al-Fatihah itself: the majority of the Kufan reciters and a group of Companions and Tabi'in held it is a separate verse at the surah's opening, while Malik, Abu Hanifa and their followers held it is not a verse of Al-Fatihah.",
+   "shiaView": "Tabatabai explains the verse as Allah beginning His speech with His own name — a lesson for mankind to begin all works in Allah's name. The 'bi' attaches to an implied verb ('I begin'); 'Allah' is the proper name of God; ar-Rahman is universal mercy (believers and unbelievers alike), ar-Rahim the special, perpetual mercy for believers. Ahl al-Bayt traditions affirm it is part of every chapter except Surah 9.",
+   "neutralExplanation": "Both treat the verse as the Book's opening formula and both address its verse-status. Notably, Al-Mizan itself acknowledges Sunni narrations (ad-Daraqutni from Abu Hurayrah) supporting the Basmalah-as-verse position, so the affirmative position is shared across the schools; the recorded Sunni disagreement (Kufans vs. Malik/Abu Hanifa) is intra-Sunni.",
+   "agreements": [
+    "The Basmalah opens the Book.",
+    "The universal/special mercy distinction between ar-Rahman and ar-Rahim.",
+    "Sunni narrations supporting the Basmalah-as-verse view are acknowledged by both sides."
+   ],
+   "differences": [
+    "Finer points of disagreement not established from these excerpts."
+   ],
+   "linguisticNotes": [
+    "'bi' attaches to an implied verb — 'I begin'.",
+    "'Allah' established as the proper name (ism 'alam) of God."
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://www.alim.org/quran/tafsir/ibn-kathir/surah/1/0/"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1 (English, Rizvi trans.)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/gu/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-1-5"
+    }
+   ]
+  },
+  {
+   "ayah": 1,
+   "language": "bengali",
+   "title": "১:১ — বাসমালা: সুন্নি-শিয়া তুলনামূলক গবেষণা",
+   "sunniView": "ইবনে কাসীর লিপিবদ্ধ করেছেন যে সাহাবাগণ আল্লাহর কিতাব শুরু করেছেন বিসমিল্লাহ দিয়ে, এবং এটি আল-ফাতিহার আয়াত কিনা — এ নিয়ে মতভেদ নথিভুক্ত করেছেন: কূফার অধিকাংশ কারী ও সাহাবা-তাবেয়ীদের এক দলের মতে এটি সূরার শুরুতে একটি স্বতন্ত্র আয়াত; আর মালিক, আবু হানিফা ও তাঁদের অনুসারীদের মতে এটি আল-ফাতিহার আয়াত নয়।",
+   "shiaView": "তাবাতাবাঈ ব্যাখ্যা করেছেন: আল্লাহ নিজের নামে তাঁর বাণী শুরু করেছেন — মানবজাতির জন্য শিক্ষা যে সব কাজ আল্লাহর নামে শুরু করবে। 'বি' একটি উহ্য ক্রিয়ার সাথে যুক্ত ('আমি শুরু করছি'); 'আল্লাহ' আল্লাহর প্রকৃত নাম; আর-রহমান সার্বজনীন দয়া (মুমিন-কাফের সবার জন্য), আর-রহীম মুমিনদের জন্য বিশেষ ও স্থায়ী দয়া। আহলে বাইতের ঐতিহ্য নিশ্চিত করে যে এটি সূরা ৯ ব্যতীত প্রত্যেক সূরার অংশ।",
+   "neutralExplanation": "উভয়েই আয়াতটিকে কিতাবের সূচনা-সূত্র হিসেবে দেখে এবং উভয়েই এর আয়াত-মর্যাদা নিয়ে আলোচনা করে। উল্লেখযোগ্যভাবে, আল-মিযান নিজেই বাসমালা-আয়াত মতের পক্ষে সুন্নি বর্ণনা (আবু হুরায়রা থেকে আদ-দারাকুতনী) স্বীকার করে — ফলে হ্যাঁ-পক্ষীয় মত উভয় মাযহাবে shared; লিপিবদ্ধ সুন্নি মতভেদ (কূফী বনাম মালিক/আবু হানিফা) আন্তঃ-সুন্নি।",
+   "agreements": [
+    "বাসমালা কিতাবের সূচনা করে।",
+    "আর-রহমান ও আর-রহীমের মধ্যে সার্বজনীন/বিশেষ দয়ার পার্থক্য।",
+    "বাসমালা আয়াত হওয়ার পক্ষে সুন্নি বর্ণনা উভয় পক্ষই স্বীকার করে।"
+   ],
+   "differences": [
+    "এই উদ্ধৃতাংশ থেকে সূক্ষ্ম মতভেদ প্রতিষ্ঠিত হয়নি।"
+   ],
+   "linguisticNotes": [
+    "'বি' একটি উহ্য ক্রিয়ার সাথে যুক্ত — 'আমি শুরু করছি'।",
+    "'আল্লাহ' আল্লাহর প্রকৃত নাম (ইসমে আলাম) হিসেবে প্রতিষ্ঠিত।"
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://www.alim.org/quran/tafsir/ibn-kathir/surah/1/0/"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1 (English, Rizvi trans.)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/gu/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-1-5"
+    }
+   ]
+  },
+  {
+   "ayah": 2,
+   "language": "english",
+   "title": "1:2 — Al-hamdu lillah: Sunni–Shia comparison",
+   "sunniView": "Via al-Tabari, 'Alhamdu lillah' means all thanks and praise belong purely to Allah alone — not to any false object of worship nor any creature — for His innumerable favors known only to Him. Hamd (praise, broader — for attributes and deeds) is distinguished from shukr (thanks, for favors received).",
+   "shiaView": "Al-hamd (praise for good acquired by one's own will) is distinguished from the broader al-madh. The 'al' denotes all praise; since every good emanates from Allah, all praise in reality belongs to Him. The verse trains the servant to praise Allah in Allah's own chosen words.",
+   "neutralExplanation": "Strong convergence: both hold that all praise belongs exclusively to Allah, and both perform the same analytical move of distinguishing hamd from a neighboring term — shukr in the Sunni excerpt, madh in the Shia excerpt. The underlying point (praise's scope and proper object) is identical.",
+   "agreements": [
+    "All praise exclusively Allah's due.",
+    "The hamd distinction analysis (praise vs. a neighboring term)."
+   ],
+   "differences": [
+    "Not established from these excerpts."
+   ],
+   "linguisticNotes": [
+    "hamd vs shukr vs madh.",
+    "The 'al' of comprehensiveness (istighraq)."
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/2"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1 (English, Rizvi trans.)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/gu/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-1-5"
+    }
+   ]
+  },
+  {
+   "ayah": 2,
+   "language": "bengali",
+   "title": "১:২ — আল-হামদু লিল্লাহ: সুন্নি-শিয়া তুলনামূলক গবেষণা",
+   "sunniView": "তাবারীর মাধ্যমে: 'আলহামদু লিল্লাহ' অর্থ সমস্ত প্রশংসা ও কৃতজ্ঞতা একমাত্র আল্লাহরই — কোনো মিথ্যা উপাস্য বা সৃষ্টির নয় — তাঁর অগণিত অনুগ্রহের জন্য যা কেবল তিনিই জানেন। হামদ (প্রশংসা — ব্যাপকতর, গুণাবলি ও কর্মের জন্য) শুকর (কৃতজ্ঞতা — প্রাপ্ত অনুগ্রহের জন্য) থেকে পৃথক।",
+   "shiaView": "আল-হামদ (নিজ ইচ্ছায় অর্জিত ভালোর জন্য প্রশংসা) ব্যাপকতর আল-মাদহ থেকে পৃথক। 'আল' দ্বারা সমস্ত প্রশংসা বোঝায়; যেহেতু প্রত্যেক ভালো আল্লাহর পক্ষ থেকে আসে, বাস্তবে সমস্ত প্রশংসা তাঁরই। এই আয়াত বান্দাকে আল্লাহরই মনোনীত শব্দে প্রশংসা করতে শেখায়।",
+   "neutralExplanation": "দৃঢ় ঐকমত্য: উভয়েই মনে করে সমস্ত প্রশংসা একমাত্র আল্লাহর প্রাপ্য, এবং উভয়েই একই বিশ্লেষণমূলক পদক্ষেপ নেয় — হামদকে পার্শ্ববর্তী পরিভাষা থেকে পৃথক করা (সুন্নি উদ্ধৃতাংশে শুকর, শিয়া উদ্ধৃতাংশে মাদহ)। মূল বক্তব্য (প্রশংসার পরিধি ও যথাযথ পাত্র) অভিন্ন।",
+   "agreements": [
+    "সমস্ত প্রশংসা একমাত্র আল্লাহর প্রাপ্য।",
+    "হামদ-পার্থক্য বিশ্লেষণ (প্রশংসা বনাম পার্শ্ববর্তী পরিভাষা)।"
+   ],
+   "differences": [
+    "এই উদ্ধৃতাংশ থেকে প্রতিষ্ঠিত হয়নি।"
+   ],
+   "linguisticNotes": [
+    "হামদ বনাম শুকর বনাম মাদহ।",
+    "ব্যাপকতাবোধক 'আল' (ইসতিগরাক)।"
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/2"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1 (English, Rizvi trans.)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/gu/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-1-5"
+    }
+   ]
+  },
+  {
+   "ayah": 3,
+   "language": "english",
+   "title": "1:3 — Ar-Rahmanir-Rahim: Sunni–Shia comparison",
+   "sunniView": "The two names were explained under the Basmalah; quoting al-Qurtubi, Allah described Himself as ar-Rahman, ar-Rahim immediately after 'Lord of the worlds', so the statement carries both mercy and a reminder of accountability.",
+   "shiaView": "(Within the 1:1 commentary) ar-Rahman's mercy is universal — for believers and unbelievers in this world; ar-Rahim's mercy is reserved for believers and lasts into the hereafter. Cited from as-Sadiq: 'ar-Rahman is a special name with a general attribute; ar-Rahim is a general name with a special attribute.'",
+   "neutralExplanation": "Both read the two names as complementary aspects of mercy forming a two-tier structure. The Sunni excerpt adds the pairing of mercy with accountability (placed after 'Lord of the worlds'); the Shia excerpt adds the worldly/hereafter scope distinction. The core two-tier mercy reading is shared.",
+   "agreements": [
+    "Two-tier mercy (universal vs. special)."
+   ],
+   "differences": [
+    "Not established from these excerpts."
+   ],
+   "linguisticNotes": [
+    "as-Sadiq's formulation: special name–general attribute vs. general name–special attribute."
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/3"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1 (English, Rizvi trans.)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/gu/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-1-5"
+    }
+   ]
+  },
+  {
+   "ayah": 3,
+   "language": "bengali",
+   "title": "১:৩ — আর-রহমানির-রহীম: সুন্নি-শিয়া তুলনামূলক গবেষণা",
+   "sunniView": "দুটি নাম বাসমালায় ব্যাখ্যা করা হয়েছে; কুরতুবীর উদ্ধৃতিতে: আল্লাহ 'রাব্বিল আলামীন'-এর পরপরই নিজেকে আর-রহমান, আর-রহীম হিসেবে বর্ণনা করেছেন — ফলে বক্তব্যে দয়া ও জবাবদিহিতার স্মরণ — দুটোই রয়েছে।",
+   "shiaView": "(১:১-এর ভাষ্যের মধ্যে) আর-রহমানের দয়া সার্বজনীন — এই দুনিয়ায় মুমিন-কাফের সবার জন্য; আর-রহীমের দয়া মুমিনদের জন্য নির্ধারিত এবং আখেরাত পর্যন্ত স্থায়ী। আস-সাদিক থেকে উদ্ধৃত: 'আর-রহমান একটি বিশেষ নাম যার গুণ সাধারণ; আর-রহীম একটি সাধারণ নাম যার গুণ বিশেষ।'",
+   "neutralExplanation": "উভয়েই দুটি নামকে দয়ার পরিপূরক দিক হিসেবে পড়ে — দ্বিস্তরীয় কাঠামো। সুন্নি উদ্ধৃতাংশ দয়ার সাথে জবাবদিহিতার জোড়া যোগ করে ('রাব্বিল আলামীন'-এর পরে স্থাপন); শিয়া উদ্ধৃতাংশ দুনিয়া/আখেরাতের পরিধি-পার্থক্য যোগ করে। মূল দ্বিস্তরীয় দয়া-পাঠ shared।",
+   "agreements": [
+    "দ্বিস্তরীয় দয়া (সার্বজনীন বনাম বিশেষ)।"
+   ],
+   "differences": [
+    "এই উদ্ধৃতাংশ থেকে প্রতিষ্ঠিত হয়নি।"
+   ],
+   "linguisticNotes": [
+    "আস-সাদিকের সূত্রায়ণ: বিশেষ নাম–সাধারণ গুণ বনাম সাধারণ নাম–বিশেষ গুণ।"
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/3"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1 (English, Rizvi trans.)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/gu/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-1-5"
+    }
+   ]
+  },
+  {
+   "ayah": 4,
+   "language": "english",
+   "title": "1:4 — Maliki yawmid-din: Sunni–Shia comparison",
+   "sunniView": "Singling out Allah's sovereignty of the Day of Resurrection does not negate His sovereignty over all else — He is Lord of this world and the Hereafter. The Day is singled out because all dominion visibly belongs to Him alone then.",
+   "shiaView": "The two canonical readings — 'malik' (Master/Owner, from milk) and 'malik' (King/Sovereign, from mulk) — are both correct of Allah: He is Master as well as King. Since the word attaches to a 'day', the King reading is favored linguistically, while both readings remain valid.",
+   "neutralExplanation": "The excerpts address different facets rather than opposing claims: the Sunni excerpt gives the theological rationale for singling out the Day; the Shia excerpt addresses the qira'at question. No contradiction is evident; the two angles are complementary.",
+   "agreements": [],
+   "differences": [
+    "Not established from these excerpts."
+   ],
+   "linguisticNotes": [
+    "malik vs malik readings; milk (possession) vs mulk (sovereignty) roots.",
+    "'King of that time' is idiomatic; 'master of that time' is strained — favoring the King reading in a time context."
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/4"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1 (English, Rizvi trans.)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/gu/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-1-5"
+    }
+   ]
+  },
+  {
+   "ayah": 4,
+   "language": "bengali",
+   "title": "১:৪ — মালিকি ইয়াওমিদ-দীন: সুন্নি-শিয়া তুলনামূলক গবেষণা",
+   "sunniView": "কিয়ামত দিবসে আল্লাহর সার্বভৌমত্বকে বিশেষ করা অন্য সবকিছুর ওপর তাঁর সার্বভৌমত্বকে অস্বীকার করে না — তিনি দুনিয়া ও আখেরাতের রব। সেদিনকে বিশেষ করা হয়েছে কারণ তখন সমস্ত আধিপত্য প্রকাশ্যে একমাত্র তাঁরই থাকবে।",
+   "shiaView": "দুটি প্রসিদ্ধ কিরাত — 'মালিক' (মালিক/অধিপতি, মিলক থেকে) ও 'মালিক' (বাদশাহ/সার্বভৌম, মুলক থেকে) — উভয়ই আল্লাহর ক্ষেত্রে সঠিক: তিনি মালিকও, বাদশাহও। যেহেতু শব্দটি একটি 'দিন'-এর সাথে যুক্ত, ভাষাগতভাবে বাদশাহ পাঠ প্রাধান্য পায় — তবে উভয় পাঠই বৈধ।",
+   "neutralExplanation": "উদ্ধৃতাংশগুলো বিরোধী দাবির চেয়ে ভিন্ন দিক নিয়ে আলোচনা করে: সুন্নি উদ্ধৃতাংশ সেদিনকে বিশেষ করার ধর্মতাত্ত্বিক যুক্তি দেয়; শিয়া উদ্ধৃতাংশ কিরাত-প্রশ্ন নিয়ে আলোচনা করে। কোনো বৈপরীত্য দৃশ্যমান নয়; দুটি দৃষ্টিকোণ পরিপূরক।",
+   "agreements": [],
+   "differences": [
+    "এই উদ্ধৃতাংশ থেকে প্রতিষ্ঠিত হয়নি।"
+   ],
+   "linguisticNotes": [
+    "মালিক বনাম মালিক কিরাত; মিলক (মালিকানা) বনাম মুলক (সার্বভৌমত্ব) ধাতু।",
+    "'সে সময়ের বাদশাহ' স্বাভাবিক প্রয়োগ; 'সে সময়ের মালিক' কষ্টকল্পিত — সময়-প্রসঙ্গে বাদশাহ পাঠকে প্রাধান্য দেয়।"
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/4"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1 (English, Rizvi trans.)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/gu/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-1-5"
+    }
+   ]
+  },
+  {
+   "ayah": 5,
+   "language": "english",
+   "title": "1:5 — Iyyaka na'budu: Sunni–Shia comparison",
+   "sunniView": "'Ibadah linguistically means submissiveness, and religiously the utmost love, humility and fear. Placing the object ('Thee') before the verb signifies exclusivity — of worship and of seeking help.",
+   "shiaView": "'Ubudiyyah is total servitude before Allah's unlimited, unshared ownership. The fronted object 'Thee' marks exclusivity. The shift from third person to second person reflects the worshipper's presence before the Lord; the plural 'we' effaces egotism; the second clause removes any impression of the servant's independence.",
+   "neutralExplanation": "Strong convergence: both center exclusivity through the fronted object and both analyze the verse's grammar. Al-Mizan extends the analysis further (person shift, the plural, ownership metaphysics), but nothing in the excerpts contradicts the Sunni reading.",
+   "agreements": [
+    "Exclusivity through the fronted object ('Thee').",
+    "Grammatical/linguistic analysis of the verse structure."
+   ],
+   "differences": [
+    "Not established from these excerpts."
+   ],
+   "linguisticNotes": [
+    "Fronting (taqdim) of the object for exclusivity.",
+    "'Ibadah from submissiveness (a road described as mu'abbadah, paved).",
+    "Third-to-second person shift marking presence."
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/5"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1 (English, Rizvi trans.)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/gu/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-1-5"
+    }
+   ]
+  },
+  {
+   "ayah": 5,
+   "language": "bengali",
+   "title": "১:৫ — ইয়্যাকা না'বুদু: সুন্নি-শিয়া তুলনামূলক গবেষণা",
+   "sunniView": "ভাষাগতভাবে 'ইবাদাহ' অর্থ আনুগত্য, ধর্মীয় অর্থে চরম ভালোবাসা, বিনম্রতা ও ভয়। কর্ম ('তোমাকেই') ক্রিয়ার আগে আনা একনিষ্ঠতা নির্দেশ করে — ইবাদতে ও সাহায্য প্রার্থনায়।",
+   "shiaView": "'উবূদিয়্যাহ' হলো আল্লাহর অসীম ও অংশীদারহীন মালিকানার সামনে পূর্ণ দাসত্ব। সামনে আনা 'তোমাকেই' একনিষ্ঠতা চিহ্নিত করে। তৃতীয় পুরুষ থেকে দ্বিতীয় পুরুষে রূপান্তর প্রভুর সামনে উপাসকের উপস্থিতি প্রতিফলিত করে; বহুবচন 'আমরা' অহংকার মুছে দেয়; দ্বিতীয় বাক্যাংশ বান্দার স্বাধীনতার ধারণা দূর করে।",
+   "neutralExplanation": "দৃঢ় ঐকমত্য: উভয়েই সামনে আনা কর্মের মাধ্যমে একনিষ্ঠতাকে কেন্দ্র করে এবং উভয়েই আয়াতের ব্যাকরণ বিশ্লেষণ করে। আল-মিযান বিশ্লেষণকে আরও প্রসারিত করে (পুরুষ-রূপান্তর, বহুবচন, মালিকানা-তত্ত্ব), কিন্তু উদ্ধৃতাংশে সুন্নি পাঠের বিরোধী কিছু নেই।",
+   "agreements": [
+    "সামনে আনা কর্মের মাধ্যমে একনিষ্ঠতা ('তোমাকেই')।",
+    "আয়াতের গঠনের ব্যাকরণগত/ভাষাতাত্ত্বিক বিশ্লেষণ।"
+   ],
+   "differences": [
+    "এই উদ্ধৃতাংশ থেকে প্রতিষ্ঠিত হয়নি।"
+   ],
+   "linguisticNotes": [
+    "একনিষ্ঠতার জন্য কর্মকে সামনে আনা (তাকদীম)।",
+    "বিনয় থেকে 'ইবাদাহ' (মু'আব্বাদাহ — পাকা করা — রাস্তার উপমা)।",
+    "উপস্থিতি নির্দেশে তৃতীয় থেকে দ্বিতীয় পুরুষে রূপান্তর।"
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/5"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1 (English, Rizvi trans.)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/gu/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-1-5"
+    }
+   ]
+  },
+  {
+   "ayah": 6,
+   "language": "english",
+   "title": "1:6 — Ihdinas-siratal-mustaqim: Sunni–Shia comparison",
+   "sunniView": "The guidance asked for means being directed and led to success — the servant asks Allah to guide, direct, lead, and grant correct guidance.",
+   "shiaView": "As-sirat is synonymous with the road/path. The straight path is the path of those Allah favored — the ultimate goal of worship. The straight path is singular (while 'ways' are many), free of polytheism, injustice and straying: true monotheism in belief and deed.",
+   "neutralExplanation": "The shared core is the request for divine guidance. The Shia excerpt develops the path's singularity and its monotheistic content more fully; the Sunni excerpt (truncated) stays with the meaning of the guidance requested. No disagreement is evident.",
+   "agreements": [
+    "The guidance theme."
+   ],
+   "differences": [
+    "Not established from these excerpts."
+   ],
+   "linguisticNotes": [
+    "sirat/tariq/sabil synonymy.",
+    "Singular 'path' vs. plural 'ways'."
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/6"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1, verses 6-7 (English)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/hi/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-6-7"
+    }
+   ]
+  },
+  {
+   "ayah": 6,
+   "language": "bengali",
+   "title": "১:৬ — ইহদিনাস-সিরাতাল-মুস্তাকীম: সুন্নি-শিয়া তুলনামূলক গবেষণা",
+   "sunniView": "চাওয়া হেদায়েতের অর্থ হলো সঠিক পথে পরিচালিত ও সফলতার দিকে নিয়ে যাওয়া — বান্দা আল্লাহর কাছে প্রার্থনা করে যেন তিনি তাকে পথ দেখান, পরিচালিত করেন ও সঠিক হেদায়েত দান করেন।",
+   "shiaView": "আস-সিরাত পথেরই সমার্থক। সিরাতে মুস্তাকীম হলো তাদের পথ যাদের প্রতি আল্লাহ অনুগ্রহ করেছেন — ইবাদতের চরম লক্ষ্য। সোজা পথ একটিই (যদিও 'পথ' অনেক), শিরক, জুলুম ও পথভ্রষ্টতা থেকে মুক্ত: বিশ্বাস ও কর্মে খাঁটি একত্ববাদ।",
+   "neutralExplanation": "Shared মূলভাব হলো ঐশী হেদায়েতের প্রার্থনা। শিয়া উদ্ধৃতাংশ পথের একত্ব ও এর একত্ববাদী বিষয়বস্তুকে পূর্ণতরভাবে বিকশিত করে; সুন্নি উদ্ধৃতাংশ (সংক্ষিপ্ত) চাওয়া হেদায়েতের অর্থেই থাকে। কোনো মতভেদ দৃশ্যমান নয়।",
+   "agreements": [
+    "হেদায়েতের মূলভাব।"
+   ],
+   "differences": [
+    "এই উদ্ধৃতাংশ থেকে প্রতিষ্ঠিত হয়নি।"
+   ],
+   "linguisticNotes": [
+    "সিরাত/তারীক/সাবীল সমার্থকতা।",
+    "একবচন 'পথ' বনাম বহুবচন 'পথসমূহ'।"
+   ],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/6"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1, verses 6-7 (English)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/hi/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-6-7"
+    }
+   ]
+  },
+  {
+   "ayah": 7,
+   "language": "english",
+   "title": "1:7 — Siratal-ladhina: Sunni–Shia comparison",
+   "sunniView": "Connected to the servant-proclamation hadith: when the servant says 'Guide us to the straight way,' Allah says, 'This is for My servant, and My servant shall acquire what he asks for.' The path is that of those upon whom Allah bestowed favor. (The excerpt was truncated before any categorization of the remaining two groups.)",
+   "shiaView": "Three categories are named: those proceeding upward (the favored believers), those under wrath, and the astray. The favored are identified through 4:69 — prophets, the truthful, martyrs, the righteous. Straying, polytheism and injustice are treated as one in effect.",
+   "neutralExplanation": "Both identify the favored group positively as those Allah blessed. The Shia excerpt gives an explicit three-category mapping with a Qur'anic cross-reference (4:69); whether the Sunni sources categorize the remaining groups the same way was not visible in the truncated excerpt and is not assumed.",
+   "agreements": [
+    "The path is that of those Allah favored."
+   ],
+   "differences": [
+    "Not established from these excerpts (Sunni excerpt truncated before comparable categorization)."
+   ],
+   "linguisticNotes": [],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/7"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1, verses 6-7 (English)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/hi/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-6-7"
+    }
+   ]
+  },
+  {
+   "ayah": 7,
+   "language": "bengali",
+   "title": "১:৭ — সিরাতাল্লাযীনা: সুন্নি-শিয়া তুলনামূলক গবেষণা",
+   "sunniView": "বান্দার ঘোষণা-সংক্রান্ত হাদিসের সাথে যুক্ত: বান্দা যখন বলে 'আমাদেরকে সোজা পথ দেখাও', আল্লাহ বলেন, 'এটি আমার বান্দার জন্য, আর আমার বান্দা যা চাইবে তা পাবে।' এই পথ তাদেরই যাদের প্রতি আল্লাহ অনুগ্রহ করেছেন। (বাকি দুই দলের শ্রেণিবিন্যাসের আগে উদ্ধৃতাংশ সংক্ষিপ্ত ছিল।)",
+   "shiaView": "তিনটি শ্রেণির উল্লেখ: ঊর্ধ্বগামী (অনুগ্রহপ্রাপ্ত মুমিন), গজবপ্রাপ্ত এবং পথভ্রষ্ট। অনুগ্রহপ্রাপ্তদের পরিচয় ৪:৬৯-এর মাধ্যমে — নবীগণ, সত্যবাদীগণ, শহীদগণ, সৎকর্মশীলগণ। পথভ্রষ্টতা, শিরক ও জুলুম কার্যত এক বলে গণ্য।",
+   "neutralExplanation": "উভয়েই অনুগ্রহপ্রাপ্তদের পথকে ইতিবাচকভাবে চিহ্নিত করে যাদের প্রতি আল্লাহ অনুগ্রহ করেছেন। শিয়া উদ্ধৃতাংশ ৪:৬৯-এর কুরআনী cross-reference সহ স্পষ্ট তিন-শ্রেণির মানচিত্র দেয়; সুন্নি উৎসগুলো বাকি দলগুলোকে একইভাবে শ্রেণিবদ্ধ করে কিনা — সংক্ষিপ্ত উদ্ধৃতাংশে দৃশ্যমান ছিল না, অনুমান করা হয়নি।",
+   "agreements": [
+    "এই পথ তাদেরই যাদের প্রতি আল্লাহ অনুগ্রহ করেছেন।"
+   ],
+   "differences": [
+    "এই উদ্ধৃতাংশ থেকে প্রতিষ্ঠিত হয়নি (তুলনীয় শ্রেণিবিন্যাসের আগে সুন্নি উদ্ধৃতাংশ সংক্ষিপ্ত)।"
+   ],
+   "linguisticNotes": [],
+   "references": [
+    {
+     "author": "Imad al-Din Ibn Kathir",
+     "title": "Tafsir Ibn Kathir (Abridged, English)",
+     "type": "tafsir",
+     "url": "https://quran.com/al-fatihah/7"
+    },
+    {
+     "author": "Allamah Sayyid Muhammad Husayn Tabatabai",
+     "title": "Al-Mizan fi Tafsir al-Quran, Vol. 1, verses 6-7 (English)",
+     "type": "tafsir",
+     "url": "https://al-islam.org/hi/al-mizan-exegesis-quran-volume-1-sayyid-muhammad-husayn-tabatabai/surah-al-fatiha-verses-6-7"
+    }
+   ]
+  }
+ ]
+}

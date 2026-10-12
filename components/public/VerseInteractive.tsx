@@ -9,7 +9,7 @@ import {
   SchoolChip,
   SectionLabel,
 } from "./ui";
-import type { ApiResearchNote, ApiTafsir, ApiVerse } from "./types";
+import type { ApiHadith, ApiResearchNote, ApiTafsir, ApiVerse } from "./types";
 
 type TabId = "sunni" | "shia" | "hadith" | "compare" | "refs";
 
@@ -187,6 +187,7 @@ export function VerseInteractive({
   const [reading, setReading] = useState(false);
   const [bookmarked, setBookmarked] = useState(false);
   const [notice, setNotice] = useState("");
+  const [hadiths, setHadiths] = useState<ApiHadith[] | null>(null);
 
   const key = bookmarkKey(verse.surahNumber, verse.ayahNumber);
   const refLabel = `${verse.surahNumber}:${verse.ayahNumber}`;
@@ -194,6 +195,24 @@ export function VerseInteractive({
   useEffect(() => {
     setBookmarked(readBookmarks().includes(key));
   }, [key]);
+
+  useEffect(() => {
+    if (tab !== "hadith" || hadiths !== null) return;
+    let cancelled = false;
+    fetch(`/api/verses/${verse.surahNumber}/${verse.ayahNumber}/hadiths`, {
+      cache: "no-store",
+    })
+      .then((r) => (r.ok ? r.json() : []))
+      .then((d) => {
+        if (!cancelled) setHadiths(Array.isArray(d) ? d : []);
+      })
+      .catch(() => {
+        if (!cancelled) setHadiths([]);
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [tab, hadiths, verse.surahNumber, verse.ayahNumber]);
 
   const flash = (msg: string) => {
     setNotice(msg);
@@ -364,12 +383,51 @@ export function VerseInteractive({
                 />
               ))}
 
-            {tab === "hadith" && (
-              <EmptyState
-                title="এই আয়াতের সাথে যুক্ত কোনো হাদিস এখনো প্রকাশিত হয়নি"
-                body="গবেষণা নোটে হাদিসের সূত্র যুক্ত হলে সেগুলো এখানে সংকলন, গ্রন্থ, অধ্যায়, নম্বর, বর্ণনাকারী ও মানসহ দেখানো হবে।"
-              />
-            )}
+            {tab === "hadith" &&
+              (hadiths === null ? (
+                <p className="py-8 text-center text-sm text-neutral-500 dark:text-neutral-400">
+                  লোড হচ্ছে…
+                </p>
+              ) : hadiths.length > 0 ? (
+                <div className="flex flex-col gap-4">
+                  {hadiths.map((h) => (
+                    <article
+                      key={h._id}
+                      className="rounded-lg border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-black"
+                    >
+                      <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-50">
+                        {h.collectionName}
+                        {h.hadithNumber ? ` · ${h.hadithNumber}` : ""}
+                      </p>
+                      <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-neutral-500 dark:text-neutral-400">
+                        {h.narrator ? <span>বর্ণনাকারী: {h.narrator}</span> : null}
+                        {h.grading ? <span>মান: {h.grading}</span> : null}
+                        {h.book ? <span>গ্রন্থ: {h.book}</span> : null}
+                      </div>
+                      {h.bengaliTranslation ? (
+                        <p className="mt-3 text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
+                          {h.bengaliTranslation}
+                        </p>
+                      ) : null}
+                      {h.englishTranslation ? (
+                        <p className="mt-2 text-sm leading-relaxed text-neutral-500 dark:text-neutral-400">
+                          {h.englishTranslation}
+                        </p>
+                      ) : null}
+                      {h.notes ? (
+                        <p className="mt-2 text-xs italic text-neutral-400 dark:text-neutral-500">
+                          {h.notes}
+                        </p>
+                      ) : null}
+                    </article>
+                  ))}
+                </div>
+              ) : (
+                <EmptyState
+                  title="এই আয়াতের সাথে যুক্ত কোনো হাদিস এখনো প্রকাশিত হয়নি"
+                  body="গবেষণা নোটে হাদিসের সূত্র যুক্ত হলে সেগুলো এখানে সংকলন, গ্রন্থ, অধ্যায়, নম্বর, বর্ণনাকারী ও মানসহ দেখানো হবে।"
+                />
+              ))}
 
             {tab === "compare" &&
               (research ? (
