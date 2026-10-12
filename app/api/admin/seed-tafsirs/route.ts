@@ -96,6 +96,9 @@ export async function POST(req: Request): Promise<Response> {
 
     return ok({ total: ROWS.length, upserted, matched, missing });
   } catch (err) {
-    return handleRouteError(err);
+    const msg =
+      err instanceof Error ? `${err.name}: ${err.message}` : String(err);
+    // TEMP DEBUG — surface the real error to the admin UI
+    return Response.json({ error: `DEBUG: ${msg}` }, { status: 500 });
   }
 }
