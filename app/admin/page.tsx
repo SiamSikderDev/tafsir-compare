@@ -87,6 +87,10 @@ export default async function AdminDashboardPage() {
       ResearchNote.countDocuments(),
     ]);
 
+  const missingBnCount = await Verse.countDocuments({
+    $or: [{ bengaliTranslation: "" }, { bengaliTranslation: { $exists: false } }],
+  });
+
   const statusAgg = (await ResearchNote.aggregate([
     { $group: { _id: "$status", count: { $sum: 1 } } },
   ])) as { _id: string; count: number }[];
@@ -143,16 +147,17 @@ export default async function AdminDashboardPage() {
         </section>
       )}
 
-      {surahCount > 0 && verseCount < 6236 && (
+      {surahCount > 0 && (verseCount < 6236 || missingBnCount > 0) && (
         <section className="mb-6 rounded-lg border border-emerald-200 bg-emerald-50 p-6 dark:border-emerald-900 dark:bg-emerald-950/40">
           <h2 className="text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
             ৬২৩৬ আয়াত ইমপোর্ট করুন
           </h2>
           <p className="mb-4 mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
             যাচাইকৃত উৎস থেকে ৬২৩৬ আয়াতের আরবি পাঠ (তানযীল প্রকল্প, উসমানি
-            রসম — হুবহু, অপরিবর্তিত) ও ইংরেজি অনুবাদ (সহীহ ইন্টারন্যাশনাল)
-            ডাটাবেজে যোগ করুন। একবারে একটি সূরা করে ইমপোর্ট হয়; মাঝপথে
-            থামলেও আবার চালালে বাকিটুকু শেষ হবে।
+            রসম — হুবহু, অপরিবর্তিত), ইংরেজি অনুবাদ (সহীহ ইন্টারন্যাশনাল)
+            ও বাংলা অনুবাদ (ড. মুহিউদ্দীন খান) ডাটাবেজে যোগ করুন। একবারে
+            একটি সূরা করে ইমপোর্ট হয়; মাঝপথে থামলেও আবার চালালে বাকিটুকু
+            শেষ হবে।
           </p>
           <SeedVersesButton />
         </section>
