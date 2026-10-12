@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Brand palette — respectful Islamic aesthetic */
+  --color-pine-50: #f2f7f4;
+  --color-pine-100: #e0ede4;
+  --color-pine-200: #c2dbc9;
+  --color-pine-300: #97c2a4;
+  --color-pine-400: #68a37c;
+  --color-pine-500: #478660;
+  --color-pine-600: #356a4c;
+  --color-pine-700: #2b553e;
+  --color-pine-800: #254433;
+  --color-pine-900: #1f382c;
+  --color-pine-950: #0f1f18;
+
+  --color-cream-50: #fdfbf5;
+  --color-cream-100: #faf5e9;
+  --color-cream-200: #f4ead0;
+  --color-cream-300: #ecdcb0;
+
+  --color-gold-300: #e8c96a;
+  --color-gold-400: #d9b44a;
+  --color-gold-500: #c9a227;
+  --color-gold-600: #a88420;
+
+  --color-charcoal-700: #3a3a38;
+  --color-charcoal-800: #262624;
+  --color-charcoal-900: #1a1a19;
+  --color-charcoal-950: #111110;
+
+  --font-arabic: "Amiri", "Scheherazade New", serif;
+  --font-bengali: "Hind Siliguri", "Noto Sans Bengali", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-bengali);
+  background-color: #ffffff;
+  color: var(--color-neutral-900);
+}
+
+.dark body {
+  background-color: #000000;
+  color: var(--color-neutral-100);
+}
+
+.font-arabic {
+  font-family: var(--font-arabic);
+  line-height: 2.2;
+}
+
+/* Thin neutral scrollbars for admin tables */
+.admin-scroll::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.admin-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-300);
+  border-radius: 8px;
+}
+.dark .admin-scroll::-webkit-scrollbar-thumb {
+  background: var(--color-neutral-700);
+}
