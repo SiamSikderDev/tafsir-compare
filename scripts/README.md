@@ -53,10 +53,12 @@ bun scripts/seed-admin-user.ts
 - `lib/surah-metadata.ts` (114 surah names, ayah counts, Makki/Madani,
   chronological order) is structural metadata — the only content embedded
   in code.
-- `data/verses.json` — Arabic text and translations must come from a
-  verified mushaf and cited published translations. **Never type Quranic
-  Arabic from memory.** Rows with the `…` placeholder are rejected by the
-  seed script.
+- `data/verses.json` — **verified Tanzil Project import** (2026-10-12):
+  6,236 verses, Uthmani Arabic (CC BY 3.0, byte-identical, unmodified) +
+  Saheeh International English. See `data/ATTRIBUTION.md` for full license
+  terms. The seed script refuses to run unless the file has exactly 6,236
+  rows. **Never hand-edit verse text** — re-run the documented import instead,
+  and never type Quranic Arabic from memory.
 - `data/tafsirs.json`, `data/hadiths.json`, `data/research.json` —
   summaries and texts must be written from the cited book in hand, with
   exact book / author / volume / page. Unverifiable rows are rejected.

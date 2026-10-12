@@ -16,6 +16,23 @@ interface Source {
 
 const GROUPS: { heading: string; en: string; note: string; sources: Source[] }[] = [
   {
+    heading: "কুরআনের মূল পাঠ ও অনুবাদ",
+    en: "Quran text & translation",
+    note: "প্ল্যাটফর্মের প্রতিটি আয়াতের আরবি পাঠ ও ইংরেজি অনুবাদের উৎস।",
+    sources: [
+      {
+        title: "আরবি পাঠ — তানযীল প্রকল্প (উসমানি রসম)",
+        detail:
+          "Tanzil Project (tanzil.net) — CC BY 3.0 লাইসেন্সে হুবহু, অপরিবর্তিত পাঠ; উৎস স্পষ্টভাবে উল্লেখসহ ব্যবহৃত।",
+      },
+      {
+        title: "ইংরেজি অনুবাদ — সহীহ ইন্টারন্যাশনাল",
+        detail:
+          "Saheeh International — tanzil.net-এর মাধ্যমে প্রাপ্ত; অ-বাণিজ্যিক গবেষণা প্ল্যাটফর্মে ব্যবহারযোগ্য। অনুবাদ শুধু সহায়ক, মূল পাঠের বিকল্প নয়।",
+      },
+    ],
+  },
+  {
     heading: "সুন্নি তাফসীর গ্রন্থ",
     en: "Sunni tafsir works",
     note: "ধ্রুপদী সুন্নি তাফসীর ঐতিহ্যের স্বীকৃত গ্রন্থাবলি।",

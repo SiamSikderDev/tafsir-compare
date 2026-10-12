@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "eslint",
     "db:seed:surahs": "bun scripts/seed-surahs.ts",
+    "db:seed:verses": "bun scripts/seed-verses.ts",
     "db:seed:admin": "bun scripts/seed-admin-user.ts"
   },
   "dependencies": {
