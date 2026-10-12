@@ -13,6 +13,7 @@ interface BundledVerse {
   g: number;
   ar: string;
   en: string;
+  bn: string;
   j: number;
 }
 
@@ -64,10 +65,10 @@ export async function POST(req: Request): Promise<Response> {
               ayahNumber: v.a,
               globalAyahNumber: v.g,
               arabicText: v.ar,
+              bengaliTranslation: v.bn,
               englishTranslation: v.en,
               juz: v.j,
             },
-            $setOnInsert: { bengaliTranslation: "" },
           },
           upsert: true,
         },

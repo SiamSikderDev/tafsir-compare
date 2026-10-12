@@ -32,10 +32,27 @@ Imported: 2026-10-12
   translation aid and not a replacement for the Quranic text (per Tanzil's
   own disclaimer: no translation is 100% accurate).
 
+## Bengali translation
+
+- **Translation:** মুহিউদ্দীন খান (Muhiuddin Khan)
+- **Source:** Tanzil Project translations page — https://tanzil.net/trans/
+  (file ID `bn.bengali`, last update April 30, 2011 per the file header;
+  changelog at https://tanzil.net/trans/log/bn.bengali).
+- **Terms:** Tanzil provides translations for **non-commercial purposes only**.
+  Tafsir Compare is a free, non-commercial research platform (no ads, no paid
+  content), which fits these terms. If the platform ever becomes commercial,
+  permission must be obtained from the translator/publisher first.
+- **Verification at import (2026-10-12):** 6,236 verses / 114 surahs;
+  per-surah ayah counts matched `lib/surah-metadata.ts` exactly (zero
+  mismatches); 1:1 key alignment with the existing Arabic+English bundle
+  (zero missing, zero extra); ayahs sequential within every surah; Surah 1
+  verified as 7 verses starting with the Bismillah. The Bengali text is
+  stored verbatim — parsed by splitting on the first two pipes only, no
+  trimming or normalization; it is a translation aid and not a replacement
+  for the Quranic text.
+
 ## What is NOT included
 
-- No Bengali translation is bundled yet — it will be added once a translator
-  and license terms are chosen and verified.
 - No tafsir, hadith, or research content is generated from these files; that
   content enters only through the admin draft → review → published workflow
   with exact scholarly citations.
