@@ -9,6 +9,7 @@ import { AuditLog } from "@/models/AuditLog";
 import { StatusBadge } from "@/components/admin/StatusBadge";
 import { SeedSurahsButton } from "@/components/admin/SeedSurahsButton";
 import { SeedVersesButton } from "@/components/admin/SeedVersesButton";
+import { SeedTafsirsButton } from "@/components/admin/SeedTafsirsButton";
 import { formatDateTime, truncate } from "@/components/admin/utils";
 import {
   verseLabel,
@@ -160,6 +161,20 @@ export default async function AdminDashboardPage() {
             শেষ হবে।
           </p>
           <SeedVersesButton />
+        </section>
+      )}
+
+      {surahCount > 0 && (
+        <section className="mb-6 rounded-lg border border-amber-200 bg-amber-50 p-6 dark:border-amber-900 dark:bg-amber-950/40">
+          <h2 className="text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
+            আল-ফাতিহার তাফসীর প্রকাশ
+          </h2>
+          <p className="mb-4 mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
+            গবেষণা-অনুমোদিত ২৮টি তাফসীর এন্ট্রি (ইবনে কাসীর + আল-মিযান,
+            বাংলা + ইংরেজি) ডাটাবেজে প্রকাশ করুন। নিরাপদ: আগে থেকে থাকলে
+            আপডেট হবে, নতুন হলে যোগ হবে।
+          </p>
+          <SeedTafsirsButton />
         </section>
       )}
 
