@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PublicHeader } from "@/components/public/PublicHeader";
 import { PublicFooter } from "@/components/public/PublicFooter";
 import { SectionLabel } from "@/components/public/ui";
+import { TAFSIR_SOURCES, type TafsirSchool } from "@/lib/tafsir-sources";
 
 export const metadata: Metadata = {
   title: "সূত্র তালিকা",
@@ -90,6 +91,15 @@ const GROUPS: { heading: string; en: string; note: string; sources: Source[] }[]
   },
 ];
 
+const SCHOOL_GROUPS: {
+  school: TafsirSchool;
+  heading: string;
+  en: string;
+}[] = [
+  { school: "sunni", heading: "সুন্নি তাফসীর", en: "Sunni tafsir" },
+  { school: "shia", heading: "শিয়া তাফসীর", en: "Shia tafsir" },
+];
+
 export default function SourcesPage() {
   return (
     <div className="flex min-h-screen flex-col">
@@ -133,6 +143,51 @@ export default function SourcesPage() {
             </section>
           ))}
         </div>
+
+        <section className="mt-10">
+          <h2 className="text-lg font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
+            তাফসীর গ্রন্থাগার
+          </h2>
+          <p className="mt-0.5 text-xs text-neutral-400 dark:text-neutral-500">
+            Tafsir library — গবেষকরা যে ১৩টি প্রামাণ্য তাফসীর গ্রন্থ থেকে উদ্ধৃতি
+            দেন, তার প্রামাণ্য তালিকা। শুধু গ্রন্থপরিচিতি; কোনো ব্যাখ্যামূলক
+            বক্তব্য এখানে নেই।
+          </p>
+          {SCHOOL_GROUPS.map((sg) => (
+            <div key={sg.school} className="mt-6">
+              <h3 className="text-sm font-semibold text-neutral-800 dark:text-neutral-200">
+                {sg.heading}{" "}
+                <span className="font-normal text-neutral-400 dark:text-neutral-500">
+                  · {sg.en}
+                </span>
+              </h3>
+              <ul className="mt-3 grid gap-3 sm:grid-cols-2">
+                {TAFSIR_SOURCES.filter((s) => s.school === sg.school).map(
+                  (s) => (
+                    <li
+                      key={s.id}
+                      className="rounded-lg border border-neutral-200 bg-white p-4 dark:border-neutral-800 dark:bg-black"
+                    >
+                      <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-50">
+                        {s.title}
+                      </p>
+                      <p className="mt-0.5 font-arabic text-xs text-neutral-500 dark:text-neutral-400" dir="rtl" lang="ar">
+                        {s.fullTitle.split(" / ").slice(-1)[0]}
+                      </p>
+                      <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+                        {s.author} · {s.era}
+                        {s.volumes ? ` · ${s.volumes} খণ্ড` : ""}
+                      </p>
+                      <p className="mt-1 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+                        {s.description}
+                      </p>
+                    </li>
+                  ),
+                )}
+              </ul>
+            </div>
+          ))}
+        </section>
       </main>
       <PublicFooter />
     </div>

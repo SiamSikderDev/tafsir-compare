@@ -18,10 +18,12 @@ import {
   toOptionalInt,
   toRequiredInt,
 } from "./utils";
+import { TAFSIR_SOURCES, getTafsirSource } from "@/lib/tafsir-sources";
 
 interface TafsirFormState {
   surah: string;
   ayah: string;
+  sourceId: string;
   school: School;
   bookTitle: string;
   author: string;
@@ -73,6 +75,7 @@ export function TafsirForm({
   const [form, setForm] = useState<TafsirFormState>({
     surah: initialSurah,
     ayah: initialAyah,
+    sourceId: "",
     school: initial?.school ?? "sunni",
     bookTitle: initial?.bookTitle ?? "",
     author: initial?.author ?? "",
@@ -93,6 +96,18 @@ export function TafsirForm({
 
   const set = (key: keyof TafsirFormState, value: string) =>
     setForm((f) => ({ ...f, [key]: value }));
+
+  /** Pick a canonical source from the bibliography; fills book/author/school (still editable). */
+  const onSourceChange = (id: string) => {
+    const src = id ? getTafsirSource(id) : undefined;
+    setForm((f) => ({
+      ...f,
+      sourceId: id,
+      ...(src
+        ? { bookTitle: src.title, author: src.author, school: src.school as School }
+        : {}),
+    }));
+  };
 
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -200,6 +215,30 @@ export function TafsirForm({
           />
         </FormField>
       </div>
+
+      <FormField
+        label="উৎস গ্রন্থ"
+        english="Source"
+        hint="প্রামাণ্য তালিকা থেকে বাছলে গ্রন্থ, লেখক ও ধারা স্বয়ংক্রিয়ভাবে বসবে"
+      >
+        <Select value={form.sourceId} onChange={(e) => onSourceChange(e.target.value)}>
+          <option value="">— নিজে লিখুন —</option>
+          <optgroup label="সুন্নি (Sunni)">
+            {TAFSIR_SOURCES.filter((s) => s.school === "sunni").map((s) => (
+              <option key={s.id} value={s.id}>
+                {s.title} — {s.author}
+              </option>
+            ))}
+          </optgroup>
+          <optgroup label="শিয়া (Shia)">
+            {TAFSIR_SOURCES.filter((s) => s.school === "shia").map((s) => (
+              <option key={s.id} value={s.id}>
+                {s.title} — {s.author}
+              </option>
+            ))}
+          </optgroup>
+        </Select>
+      </FormField>
 
       <div className="grid gap-5 sm:grid-cols-2">
         <FormField label="মাযহাব/ধারা" english="School" required>
