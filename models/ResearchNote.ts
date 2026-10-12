@@ -128,7 +128,12 @@ const ResearchNoteSchema = new Schema<IResearchNote>(
 );
 
 ResearchNoteSchema.index({ verseId: 1, status: 1 });
-ResearchNoteSchema.index({ title: "text", context: "text", historicalContext: "text" });
+ResearchNoteSchema.index(
+  { title: "text", context: "text", historicalContext: "text" },
+  { language_override: "xTextLanguage" },
+);
+// NOTE: same as Tafsir — the `language` field must not be treated as the
+// text-index language_override.
 
 export const ResearchNote =
   models.ResearchNote || model<IResearchNote>("ResearchNote", ResearchNoteSchema);

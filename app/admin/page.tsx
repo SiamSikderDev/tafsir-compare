@@ -10,6 +10,7 @@ import { StatusBadge } from "@/components/admin/StatusBadge";
 import { SeedSurahsButton } from "@/components/admin/SeedSurahsButton";
 import { SeedVersesButton } from "@/components/admin/SeedVersesButton";
 import { SeedTafsirsButton } from "@/components/admin/SeedTafsirsButton";
+import { MigrateIndexesButton } from "@/components/admin/MigrateIndexesButton";
 import { formatDateTime, truncate } from "@/components/admin/utils";
 import {
   verseLabel,
@@ -174,6 +175,7 @@ export default async function AdminDashboardPage() {
             বাংলা + ইংরেজি) ডাটাবেজে প্রকাশ করুন। নিরাপদ: আগে থেকে থাকলে
             আপডেট হবে, নতুন হলে যোগ হবে।
           </p>
+          <MigrateIndexesButton />
           <SeedTafsirsButton />
         </section>
       )}

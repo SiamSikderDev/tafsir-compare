@@ -61,6 +61,13 @@ const TafsirSchema = new Schema<ITafsir>(
 );
 
 TafsirSchema.index({ verseId: 1, school: 1, status: 1 });
-TafsirSchema.index({ summary: "text", fullText: "text", bookTitle: "text", author: "text" });
+TafsirSchema.index(
+  { summary: "text", fullText: "text", bookTitle: "text", author: "text" },
+  { language_override: "xTextLanguage" },
+);
+// NOTE: documents carry a `language` field ("bengali"/"english") which MongoDB
+// would otherwise treat as the text-index language_override ("bengali" is not a
+// supported text language and breaks writes). Point the override at a field
+// that never exists so the default language is always used.
 
 export const Tafsir = models.Tafsir || model<ITafsir>("Tafsir", TafsirSchema);
