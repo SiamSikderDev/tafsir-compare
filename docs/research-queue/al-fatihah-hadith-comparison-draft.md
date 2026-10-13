@@ -124,10 +124,12 @@
 
 ### H7 — Basmalah is the best of the seven verses (Shia)
 
-- **Collection:** Tahdhib al-Ahkam (Shaykh al-Tusi); **hadith number not
-  established** — researcher should confirm in the book
+- **Collection:** Tahdhib al-Ahkam (Shaykh al-Tusi), **Vol. 2, Hadith 1157**
+  (hadith 13 within its chapter), p. 289 — Kitab al-Salat, Bab al-Qira'ah
+  fi al-Salat. Reference found via Google AI Mode (ShiaOnlineLibrary);
+  researcher should verify in print.
 - **Narrator:** Imam Ja'far as-Sadiq (as) — via Muhammad ibn Muslim
-- **Grading:** Valid chain (per secondary source)
+- **Grading:** Sahih (chain of trustworthy narrators, per AI Mode research)
 - **Related verses:** 1:1
 - **Summary (EN):** Muhammad ibn Muslim asked whether "as-sab' al-mathani
   wa'l-quran al-'azim" refers to Surah al-Fatihah; the Imam (as) affirmed it.
@@ -141,10 +143,11 @@
 
 ### H8 — As-Sab' al-Mathani is Surah Al-Hamd (Shia)
 
-- **Collection:** Sunan ad-Daraqutni ("according to a sound document");
-  **hadith number not established**
+- **Collection:** Sunan ad-Daraqutni, **Hadith 1194** (alt. numbering 1179
+  by edition) — Kitab al-Salat, Bab al-Jahr bi Bismillahir-Rahmanir-Rahim.
+  Reference found via Google AI Mode (Dorar al-Saniya).
 - **Narrator:** Imam Ali ibn Abi Talib (as)
-- **Grading:** Sound document (per secondary source)
+- **Grading:** Authentic per ad-Daraqutni (chain of thiqat)
 - **Related verses:** 1:1
 - **Summary (EN):** Asked "What is As-Sab' al-Mathani?" he (as) answered:
   "It is Surah Al-Hamd." The man said it has six verses; he (as) replied:
@@ -155,8 +158,12 @@
 
 ### H9 — Allah favored me with Al-Fatihah (Shia)
 
-- **Collection:** Al-Burhan fi Tafsir al-Quran, vol. 1, p. 21 (as cited);
-  **hadith number and grading not established** — needs researcher
+- **Collection:** Al-Burhan fi Tafsir al-Quran, **Bab Fadl Fatihat al-Kitab,
+  Hadith 224** (modern ed. Vol. 1, p. 95; older prints p. 21). Original
+  source per AI Mode: Shaykh al-Saduq, 'Uyun Akhbar al-Rida Vol. 1 Ch. 28
+  Hadith 60 / Al-Amali Assembly 33 Hadith 2, via Tafsir al-Imam al-'Askari
+  p. 29 Hadith 10; also Bihar al-Anwar Vol. 89/92 p. 227 Hadith 5 and
+  Wasa'il al-Shia Vol. 6 p. 38. Needs researcher verification.
 - **Narrator:** Amir al-Mu'minin Ali (as), quoting the Prophet ﷺ
 - **Related verses:** Whole surah (1:1–1:7)
 - **Summary (EN):** Allah bestowed His favors on the Prophet ﷺ particularly
@@ -168,10 +175,12 @@
 
 ### H10 — Say the bismillah in prayer (Shia)
 
-- **Collection:** Primary source not established — researcher should identify
-  it (relayed in Enlightening Commentary)
+- **Collection:** Al-Kafi (Furu' al-Kafi), **Vol. 3, Hadith 1 within its
+  chapter** (sequential 4236/5 by edition) — Kitab al-Salat, Bab Qira'ah
+  al-Quran. Also in Tahdhib al-Ahkam Vol. 2 Hadith 1152 and Wasa'il al-Shia
+  Vol. 6 Hadith 7340. Reference found via Google AI Mode; verify in print.
 - **Narrator:** Imam Ja'far as-Sadiq (as) — via Mu'awiyah ibn 'Ammar
-- **Grading:** Not established
+- **Grading:** Sahih (per Shia jurisprudents)
 - **Related verses:** 1:1
 - **Summary (EN):** Asked whether to say the bismillah at the beginning of
   Al-Fatihah in prayer — "Yes"; and after Al-Fatihah before the next surah —
