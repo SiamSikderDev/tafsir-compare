@@ -41,6 +41,7 @@ interface BundledHadith {
   sourceUrl: string;
   notes: string;
   relevanceNote?: string;
+  evidenceTier?: "primary" | "disputed";
 }
 
 interface SchoolPair {
@@ -185,6 +186,7 @@ export async function POST(req: Request): Promise<Response> {
             sourceUrl: h.sourceUrl,
             notes: h.notes,
             relevanceNote: h.relevanceNote || "",
+            ...(h.evidenceTier ? { evidenceTier: h.evidenceTier } : {}),
             status: "published",
             verifiedBy: "Siam Sikder",
           },

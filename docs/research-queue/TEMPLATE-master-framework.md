@@ -34,7 +34,19 @@ For EACH tafsir record: bookTitle, author, language (BN+EN summaries), summary, 
 
 For EACH hadith: collectionName, school, book, chapter, hadithNumber, narrator, arabicText (when available),
 bengaliTranslation, englishTranslation, grading, gradingSource, sourceUrl, notes, `relevanceNote`
-(how it relates to Ali/Ahl al-Bayt/wilayah — empty when it doesn't).
+(how it relates to Ali/Ahl al-Bayt/wilayah — empty when it doesn't), and `evidenceTier`:
+- `"primary"` — Sahih or Hasan AND clearly supports Ali/Ahl al-Bayt/wilayah. Presented prominently.
+- `"disputed"` — weak, disputed, or not directly about Ali. Labeled clearly with grading; both Sunni
+  and Shia scholarly positions shown honestly. Never hidden, never presented as primary proof.
+
+**Sunni hadith evidence is split into two sections per ayah:**
+1. PRIMARY SUNNI EVIDENCE — only Sahih/Hasan narrations clearly supporting Ali, Ahl al-Bayt, wilayah
+   (e.g. Ghadir Khumm, Two Weighty Things, Harun-Musa where thematically relevant).
+2. DISPUTED / CONTEXTUAL EVIDENCE — weak/disputed/not-directly-about-Ali narrations, honestly labeled.
+
+**Tafsir rule:** if a Sunni tafsir does not mention Ali, say clearly "This tafsir does not explicitly
+mention Ali here." Never force Ali's name into a tafsir. Ali-related evidence comes primarily from
+Sunni hadith collections, not Sunni tafsir books.
 
 **Special focus:** Sunni narrations on Ali ibn Abi Talib, Ahl al-Bayt, wilayah, the Shia of Ali,
 Ghadir Khumm, the Two Weighty Things — presented accurately with Sunni scholarly context, never distorted.

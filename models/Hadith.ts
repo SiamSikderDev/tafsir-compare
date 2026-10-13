@@ -16,6 +16,7 @@ export interface IHadith extends Document {
   sourceUrl?: string;
   notes?: string;
   relevanceNote?: string;
+  evidenceTier?: "primary" | "disputed";
   status: PublishStatus;
   createdAt: Date;
   updatedAt: Date;
@@ -42,6 +43,11 @@ const HadithSchema = new Schema<IHadith>(
     sourceUrl: { type: String, trim: true, maxlength: 2000 },
     notes: { type: String, default: "" },
     relevanceNote: { type: String, default: "" },
+    evidenceTier: {
+      type: String,
+      enum: ["primary", "disputed"],
+      index: true,
+    },
     status: {
       type: String,
       enum: ["draft", "review", "published"],
