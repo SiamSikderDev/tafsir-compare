@@ -44,6 +44,11 @@ const APPROVED_BATCHES: { key: string; label: string; blurb: string }[] = [
     label: "ফাতিহা ১:১ মাস্টার ফ্রেমওয়ার্ক প্রকাশ করুন (অনুমোদনের পর)",
     blurb: "১৮টি তাফসীর (৫ সুন্নি + ৪ শিয়া), ১৪টি হাদিস, শান-এ-নুযূল, তুলনা টেবিল (বাংলা + ইংরেজি)।",
   },
+  {
+    key: "maidah-5-55-master",
+    label: "মায়িদা ৫:৫৫ মাস্টার ফ্রেমওয়ার্ক প্রকাশ করুন (অনুমোদনের পর)",
+    blurb: "১৮টি তাফসীর (৫ সুন্নি + ৪ শিয়া), ১০টি হাদিস (primary/disputed), শান-এ-নুযূল, তুলনা টেবিল (বাংলা + ইংরেজি)।",
+  },
 ];
 import { formatDateTime, truncate } from "@/components/admin/utils";
 import {
