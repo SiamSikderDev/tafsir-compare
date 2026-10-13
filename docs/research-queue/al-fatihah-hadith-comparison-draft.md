@@ -122,19 +122,62 @@
 - **Relevance:** Virtue/excellence of the surah.
 - **Source URL:** https://en.tohed.com/threads/the-unmatched-virtues-of-surah-al-fatihah-in-authentic-hadith.11489/
 
-### H7 — Shia narrations (source identification needed)
+### H7 — Basmalah is the best of the seven verses (Shia)
 
-- **Status:** "Shia hadith source not reliably identified — needs researcher."
-- **What is known:** The Al-Mizan "Traditions" section (al-islam.org, verses
-  1–5) cites traditions from as-Sadiq and Imam 'Ali on the Basmalah and the
-  mercy names. A Shia commentary page (al-islam.org, "Enlightening
-  Commentary") relays narrations attributed to Imam 'Ali (as) on the surah's
-  unique virtue (e.g. placed on a par with the whole Quran; reward like
-  reciting two-thirds of the Quran) — but the footnote references were not
-  visible in the excerpt, so the primary source (Al-Kafi or other) is NOT
-  established.
-- **Action for researcher:** Identify the primary Shia source (e.g. Al-Kafi,
-  volume/book/hadith number) before any entry is written.
+- **Collection:** Tahdhib al-Ahkam (Shaykh al-Tusi); **hadith number not
+  established** — researcher should confirm in the book
+- **Narrator:** Imam Ja'far as-Sadiq (as) — via Muhammad ibn Muslim
+- **Grading:** Valid chain (per secondary source)
+- **Related verses:** 1:1
+- **Summary (EN):** Muhammad ibn Muslim asked whether "as-sab' al-mathani
+  wa'l-quran al-'azim" refers to Surah al-Fatihah; the Imam (as) affirmed it.
+  Asked whether the bismillah is part of the seven, he replied: "Yes, it is.
+  It is the best of these seven verses."
+- **Summary (BN):** মুহাম্মদ ইবনে মুসলিম জিজ্ঞেস করেন "আস-সাব'উল-মাসানী
+  ওয়াল-কুরআনাল-'আযীম" কি সূরা আল-ফাতিহা? ইমাম (আ.) সম্মতি দেন।
+  "বিসমিল্লাহ কি সাতটির অংশ?" — "হ্যাঁ, এটি। এটি সাতটি আয়াতের মধ্যে
+  সর্বোত্তম।"
+- **Source URL:** https://al-islam.org/printpdf/book/export/html/37600
+
+### H8 — As-Sab' al-Mathani is Surah Al-Hamd (Shia)
+
+- **Collection:** Sunan ad-Daraqutni ("according to a sound document");
+  **hadith number not established**
+- **Narrator:** Imam Ali ibn Abi Talib (as)
+- **Grading:** Sound document (per secondary source)
+- **Related verses:** 1:1
+- **Summary (EN):** Asked "What is As-Sab' al-Mathani?" he (as) answered:
+  "It is Surah Al-Hamd." The man said it has six verses; he (as) replied:
+  "Bismillah ir-Rahman ir-Rahim is also one verse."
+- **Summary (BN):** "আস-সাব'উল-মাসানী কী?" — "এটি সূরা আল-হামদ।" "সূরা
+  আল-হামদ তো ছয় আয়াত।" — "বিসমিল্লাহির-রহমানির-রহীমও একটি আয়াত।"
+- **Source URL:** https://www.al-islam.org/enlightening-commentary-light-holy-quran-vol-1/surah-al-fatihah-chapter-1
+
+### H9 — Allah favored me with Al-Fatihah (Shia)
+
+- **Collection:** Al-Burhan fi Tafsir al-Quran, vol. 1, p. 21 (as cited);
+  **hadith number and grading not established** — needs researcher
+- **Narrator:** Amir al-Mu'minin Ali (as), quoting the Prophet ﷺ
+- **Related verses:** Whole surah (1:1–1:7)
+- **Summary (EN):** Allah bestowed His favors on the Prophet ﷺ particularly
+  with Al-Fatihah and positioned it on a par with the whole Grand Quran;
+  Fatihat-ul-Kitab is the dearest item in the treasures of the 'Arsh.
+- **Summary (BN):** আল্লাহ রাসূল ﷺ-কে বিশেষভাবে "আল-ফাতিহা" দিয়ে অনুগ্রহ
+  করেছেন এবং এটিকে সমগ্র মহান কুরআনের সমতুল্য স্থান দিয়েছেন।
+- **Source URL:** https://www.scribd.com/document/36071596/Introduction-to-Al-Fateha
+
+### H10 — Say the bismillah in prayer (Shia)
+
+- **Collection:** Primary source not established — researcher should identify
+  it (relayed in Enlightening Commentary)
+- **Narrator:** Imam Ja'far as-Sadiq (as) — via Mu'awiyah ibn 'Ammar
+- **Grading:** Not established
+- **Related verses:** 1:1
+- **Summary (EN):** Asked whether to say the bismillah at the beginning of
+  Al-Fatihah in prayer — "Yes"; and after Al-Fatihah before the next surah —
+  "Yes" again.
+- **Summary (BN):** সালাতে সূরা ফাতিহার শুরুতে বিসমিল্লাহ বলবেন কিনা —
+  "হ্যাঁ"; ফাতিহা শেষে পরের সূরার আগে — আবারও "হ্যাঁ"।
 - **Source URL:** https://www.al-islam.org/enlightening-commentary-light-holy-quran-vol-1/surah-al-fatihah-chapter-1
 
 ---
@@ -340,6 +383,27 @@ draft supports them.
   madrasatelquran.com, getfahm.com, tohed.com, basira.institute. One source
   (tohed.com) additionally gives an alternate numbering (878) for a
   Kitab as-Salah arrangement — noted, not used as primary.
+
+**sunnah.com verification pass (2026-10-13 ~09:55 +06, researcher):** every
+hadith number below was opened directly on sunnah.com and confirmed to match
+the draft's description:
+- H1: sunnah.com/muslim:395 resolves to **Sahih Muslim 395a** (In-book
+  reference: Book 4, Hadith 41), narrator Abu Hurayrah — the Hadith Qudsi of
+  Allah dividing the prayer with His servant. MATCH.
+- H2: sunnah.com/bukhari:5006 — "Shall I not teach you the most superior
+  Surah in the Qur'an?" narrated Abu Sa'id Al-Mu'alla, as-sab' al-mathani.
+  MATCH.
+- H3: sunnah.com/bukhari:5736 — ruqyah incident, narrated Abu Sa'id
+  Al-Khudri, "How do you know that Surat-al-Fatiha is a Ruqya?" MATCH.
+- H4: sunnah.com/bukhari:756 — "Whoever does not recite Al-Fatiha in his
+  prayer, his prayer is invalid," narrated 'Ubada bin As-Samit. MATCH.
+- H5: sunnah.com/muslim:806 — two lights (Fatihat al-Kitab + closing verses
+  of al-Baqarah), Ibn 'Abbas. MATCH.
+- H6: sunnah.com/tirmidhi:2875 — "nothing like it revealed in the Tawrah,
+  Injil, Zabur, nor the Furqan," graded Hasan Sahih. MATCH, with one
+  nuance: sunnah.com lists the chain narrator as **Abu Hurayrah** reporting
+  the incident with Ubayy ibn Ka'b — the draft lists Ubayy as narrator;
+  correct to Abu Hurayrah (incident subject: Ubayy) before database entry.
 - H2: Sahih al-Bukhari 5006 (greatest surah, Abu Sa'id ibn al-Mu'alla) —
   cited by abuaminaelias.com with grade Sahih.
 - H3: Sahih al-Bukhari 5736 (ruqyah, Abu Sa'id al-Khudri) — cited by
@@ -352,8 +416,11 @@ draft supports them.
   Ka'b) — cited by en.tohed.com.
 
 **Needs verification by researcher:**
-- Exact sunnah.com URL paths for each hadith (not guessed; deliberately not
-  listed — the researcher should open sunnah.com and confirm each number).
+- Exact sunnah.com URL paths for each hadith — DONE 2026-10-13 morning pass
+  (see above); URLs: sunnah.com/muslim:395, /bukhari:5006, /bukhari:5736,
+  /bukhari:756, /muslim:806, /tirmidhi:2875.
+- H6 narrator nuance — correct chain narrator to Abu Hurayrah (incident
+  subject: Ubayy ibn Ka'b) before database entry.
 - H7: primary Shia source for the Al-Fatihah virtue narrations (Al-Kafi
   book/volume/hadith number not identified; footnote references on
   al-islam.org were not visible in excerpts).
