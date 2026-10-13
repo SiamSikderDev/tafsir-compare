@@ -1,6 +1,12 @@
 # MASTER Research Framework — Whole-Quran Shia-Sunni Comparative Tafsir & Hadith
 
 **Adopted:** 2026-10-13 · **Owner directive:** master prompt "Whole-Quran Shia-Sunni Comparative Tafsir & Hadith Research"
+**ROLE UPDATE 2026-10-13 ~17:02 +06:** Muse is now DEVELOPER ONLY. Research content is provided by the
+owner (or Perplexity) as ready-made markdown drafts. Muse does NOT research tafsir/hadith/shan-e-nuzul,
+does NOT verify Islamic references, does NOT judge authenticity, and never invents religious content.
+Muse's job: parse the provided draft → validate shape → store in MongoDB → display on the ayah page →
+publish after owner approval. If content is missing/malformed, ask the owner for clarification.
+This template remains the CONTRACT for the shape of incoming research drafts.
 **Perspective:** Shia school of thought — with NON-NEGOTIABLE honesty rules (below).
 **Approval workflow:** research → draft shown to owner → "Do you approve this for publishing?" → publish only after approval.
 

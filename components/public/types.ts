@@ -40,6 +40,8 @@ export interface ApiTafsir {
   sourceUrl?: string;
   publisher?: string;
   publicationYear?: number;
+  mentionsAliAhlulBayt?: boolean;
+  mentionNote?: string;
 }
 
 export interface ApiHadith {
@@ -57,6 +59,8 @@ export interface ApiHadith {
   gradingSource?: string;
   sourceUrl?: string;
   notes?: string;
+  relevanceNote?: string;
+  evidenceTier?: "primary" | "disputed";
 }
 
 export interface ApiReference {
@@ -74,6 +78,11 @@ export interface ApiReference {
 
 export type Confidence = "high" | "medium" | "low";
 
+export interface ApiSchoolPair {
+  sunni?: string;
+  shia?: string;
+}
+
 export interface ApiResearchNote {
   _id: string;
   verseId: string;
@@ -89,6 +98,14 @@ export interface ApiResearchNote {
     differences?: string[];
     neutralExplanation?: string;
   };
+  shanENuzul?: ApiSchoolPair;
+  comparisonTable?: {
+    mainExplanation?: ApiSchoolPair;
+    aliConnection?: ApiSchoolPair;
+    keyHadithEvidence?: ApiSchoolPair;
+    wilayahConcept?: ApiSchoolPair;
+  };
+  honestLimitations?: string[];
   references?: ApiReference[];
   confidence?: Confidence;
   reviewer?: string;

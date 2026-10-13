@@ -11,12 +11,13 @@ import {
 } from "./ui";
 import type { ApiHadith, ApiResearchNote, ApiTafsir, ApiVerse } from "./types";
 
-type TabId = "sunni" | "shia" | "hadith" | "compare" | "refs";
+type TabId = "sunni" | "shia" | "hadith" | "nuzul" | "compare" | "refs";
 
 const TABS: { id: TabId; bn: string; en: string }[] = [
   { id: "sunni", bn: "সুন্নি তাফসীর", en: "Sunni tafsir" },
   { id: "shia", bn: "শিয়া তাফসীর", en: "Shia tafsir" },
   { id: "hadith", bn: "হাদিস", en: "Hadith" },
+  { id: "nuzul", bn: "শান-এ-নুযূল", en: "Occasion of revelation" },
   { id: "compare", bn: "তুলনা", en: "Comparison" },
   { id: "refs", bn: "সূত্র", en: "References" },
 ];
@@ -104,6 +105,24 @@ function TafsirEntry({ t }: { t: ApiTafsir }) {
           লেখক: {t.author}
         </p>
       ) : null}
+      {t.mentionsAliAhlulBayt !== undefined ? (
+        <p
+          className={`mb-3 inline-block rounded-full border px-2.5 py-0.5 text-[11px] font-semibold ${
+            t.mentionsAliAhlulBayt
+              ? "border-pine-600/40 bg-pine-50 text-pine-700 dark:border-pine-500/40 dark:bg-pine-500/10 dark:text-pine-300"
+              : "border-neutral-200 bg-neutral-50 text-neutral-500 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-400"
+          }`}
+        >
+          {t.mentionsAliAhlulBayt
+            ? "আলী/আহলুল বাইত উল্লেখ আছে"
+            : "আলী/আহলুল বাইত উল্লেখ নেই"}
+        </p>
+      ) : null}
+      {t.mentionNote ? (
+        <p className="mb-3 text-xs leading-relaxed text-neutral-500 dark:text-neutral-400">
+          {t.mentionNote}
+        </p>
+      ) : null}
       {t.summary ? (
         <p className="text-[15px] font-medium leading-relaxed text-neutral-800 dark:text-neutral-100">
           {t.summary}
@@ -167,6 +186,136 @@ function BulletList({ items }: { items: string[] }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+function HadithCard({ h }: { h: ApiHadith }) {
+  return (
+    <article className="rounded-lg border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-black">
+      <div className="mb-1 flex flex-wrap items-center gap-2">
+        <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-50">
+          {h.collectionName}
+          {h.hadithNumber ? ` · ${h.hadithNumber}` : ""}
+        </p>
+        {h.evidenceTier ? (
+          <span
+            className={`rounded-full border px-2 py-0.5 text-[11px] font-semibold ${
+              h.evidenceTier === "primary"
+                ? "border-pine-600/40 bg-pine-50 text-pine-700 dark:border-pine-500/40 dark:bg-pine-500/10 dark:text-pine-300"
+                : "border-gold-600/40 bg-gold-50 text-gold-700 dark:border-gold-500/40 dark:bg-gold-500/10 dark:text-gold-300"
+            }`}
+          >
+            {h.evidenceTier === "primary" ? "প্রাইমারি প্রমাণ" : "বিতর্কিত/প্রাসঙ্গিক"}
+          </span>
+        ) : null}
+      </div>
+      <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-neutral-500 dark:text-neutral-400">
+        {h.narrator ? <span>বর্ণনাকারী: {h.narrator}</span> : null}
+        {h.grading ? <span>মান: {h.grading}</span> : null}
+        {h.book ? <span>গ্রন্থ: {h.book}</span> : null}
+      </div>
+      {h.arabicText ? (
+        <p
+          dir="rtl"
+          lang="ar"
+          className="font-arabic mt-3 text-right text-lg leading-loose text-neutral-900 dark:text-neutral-50"
+        >
+          {h.arabicText}
+        </p>
+      ) : null}
+      {h.bengaliTranslation ? (
+        <p className="mt-3 text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
+          {h.bengaliTranslation}
+        </p>
+      ) : null}
+      {h.englishTranslation ? (
+        <p className="mt-2 text-sm leading-relaxed text-neutral-500 dark:text-neutral-400">
+          {h.englishTranslation}
+        </p>
+      ) : null}
+      {h.relevanceNote ? (
+        <p className="mt-2 text-xs leading-relaxed text-pine-700 dark:text-pine-400">
+          {h.relevanceNote}
+        </p>
+      ) : null}
+      {h.notes ? (
+        <p className="mt-2 text-xs italic text-neutral-400 dark:text-neutral-500">
+          {h.notes}
+        </p>
+      ) : null}
+    </article>
+  );
+}
+
+function HadithTieredList({ hadiths }: { hadiths: ApiHadith[] }) {
+  const primary = hadiths.filter(
+    (h) => h.school === "sunni" && h.evidenceTier === "primary",
+  );
+  const disputed = hadiths.filter(
+    (h) => h.school === "sunni" && h.evidenceTier === "disputed",
+  );
+  const shia = hadiths.filter((h) => h.school === "shia");
+  const untiered = hadiths.filter(
+    (h) => h.school !== "shia" && !h.evidenceTier,
+  );
+  const hasTiers = primary.length > 0 || disputed.length > 0;
+
+  if (!hasTiers) {
+    return (
+      <div className="flex flex-col gap-4">
+        {hadiths.map((h) => (
+          <HadithCard key={h._id} h={h} />
+        ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="flex flex-col gap-8">
+      {primary.length > 0 ? (
+        <section>
+          <SectionLabel>প্রাইমারি সুন্নি প্রমাণ · Sahih/Hasan</SectionLabel>
+          <div className="mt-3 flex flex-col gap-4">
+            {primary.map((h) => (
+              <HadithCard key={h._id} h={h} />
+            ))}
+          </div>
+        </section>
+      ) : null}
+      {disputed.length > 0 ? (
+        <section>
+          <SectionLabel>বিতর্কিত / প্রাসঙ্গিক প্রমাণ · Disputed</SectionLabel>
+          <p className="mt-1 text-xs text-neutral-500 dark:text-neutral-400">
+            দুর্বল বা বিতর্কিত বর্ণনা — সুন্নি ও শিয়া উভয় অবস্থান সৎভাবে তুলে ধরা হয়েছে।
+          </p>
+          <div className="mt-3 flex flex-col gap-4">
+            {disputed.map((h) => (
+              <HadithCard key={h._id} h={h} />
+            ))}
+          </div>
+        </section>
+      ) : null}
+      {untiered.length > 0 ? (
+        <section>
+          <SectionLabel>অন্যান্য হাদিস</SectionLabel>
+          <div className="mt-3 flex flex-col gap-4">
+            {untiered.map((h) => (
+              <HadithCard key={h._id} h={h} />
+            ))}
+          </div>
+        </section>
+      ) : null}
+      {shia.length > 0 ? (
+        <section>
+          <SectionLabel>শিয়া হাদিস প্রমাণ</SectionLabel>
+          <div className="mt-3 flex flex-col gap-4">
+            {shia.map((h) => (
+              <HadithCard key={h._id} h={h} />
+            ))}
+          </div>
+        </section>
+      ) : null}
+    </div>
   );
 }
 
@@ -389,43 +538,35 @@ export function VerseInteractive({
                   লোড হচ্ছে…
                 </p>
               ) : hadiths.length > 0 ? (
-                <div className="flex flex-col gap-4">
-                  {hadiths.map((h) => (
-                    <article
-                      key={h._id}
-                      className="rounded-lg border border-neutral-200 bg-white p-5 dark:border-neutral-800 dark:bg-black"
-                    >
-                      <p className="text-sm font-semibold text-neutral-900 dark:text-neutral-50">
-                        {h.collectionName}
-                        {h.hadithNumber ? ` · ${h.hadithNumber}` : ""}
-                      </p>
-                      <div className="mt-1 flex flex-wrap gap-x-3 gap-y-1 text-xs text-neutral-500 dark:text-neutral-400">
-                        {h.narrator ? <span>বর্ণনাকারী: {h.narrator}</span> : null}
-                        {h.grading ? <span>মান: {h.grading}</span> : null}
-                        {h.book ? <span>গ্রন্থ: {h.book}</span> : null}
-                      </div>
-                      {h.bengaliTranslation ? (
-                        <p className="mt-3 text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
-                          {h.bengaliTranslation}
-                        </p>
-                      ) : null}
-                      {h.englishTranslation ? (
-                        <p className="mt-2 text-sm leading-relaxed text-neutral-500 dark:text-neutral-400">
-                          {h.englishTranslation}
-                        </p>
-                      ) : null}
-                      {h.notes ? (
-                        <p className="mt-2 text-xs italic text-neutral-400 dark:text-neutral-500">
-                          {h.notes}
-                        </p>
-                      ) : null}
-                    </article>
-                  ))}
-                </div>
+                <HadithTieredList hadiths={hadiths} />
               ) : (
                 <EmptyState
                   title="এই আয়াতের সাথে যুক্ত কোনো হাদিস এখনো প্রকাশিত হয়নি"
                   body="গবেষণা নোটে হাদিসের সূত্র যুক্ত হলে সেগুলো এখানে সংকলন, গ্রন্থ, অধ্যায়, নম্বর, বর্ণনাকারী ও মানসহ দেখানো হবে।"
+                />
+              ))}
+
+            {tab === "nuzul" &&
+              (research?.shanENuzul &&
+              (research.shanENuzul.sunni || research.shanENuzul.shia) ? (
+                <div className="grid gap-4 md:grid-cols-2">
+                  <section className="rounded-lg border border-neutral-200 bg-white p-5 sm:p-6 dark:border-neutral-800 dark:bg-black">
+                    <SectionLabel>সুন্নি রিপোর্ট</SectionLabel>
+                    <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
+                      {research.shanENuzul.sunni || "লিপিবদ্ধ হয়নি।"}
+                    </p>
+                  </section>
+                  <section className="rounded-lg border border-neutral-200 bg-white p-5 sm:p-6 dark:border-neutral-800 dark:bg-black">
+                    <SectionLabel>শিয়া রিপোর্ট</SectionLabel>
+                    <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
+                      {research.shanENuzul.shia || "লিপিবদ্ধ হয়নি।"}
+                    </p>
+                  </section>
+                </div>
+              ) : (
+                <EmptyState
+                  title="শান-এ-নুযূল এখনো প্রকাশিত হয়নি"
+                  body="এই আয়াতের অবতরণ প্রেক্ষাপট গবেষণাধীন আছে। যাচাই শেষে এখানে প্রকাশ করা হবে।"
                 />
               ))}
 
@@ -494,6 +635,73 @@ export function VerseInteractive({
                       <p className="mt-3 whitespace-pre-line text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
                         {research.comparison.neutralExplanation}
                       </p>
+                    </section>
+                  ) : null}
+
+                  {research.comparisonTable &&
+                  (research.comparisonTable.mainExplanation?.sunni ||
+                    research.comparisonTable.mainExplanation?.shia ||
+                    research.comparisonTable.aliConnection?.sunni ||
+                    research.comparisonTable.aliConnection?.shia ||
+                    research.comparisonTable.keyHadithEvidence?.sunni ||
+                    research.comparisonTable.keyHadithEvidence?.shia ||
+                    research.comparisonTable.wilayahConcept?.sunni ||
+                    research.comparisonTable.wilayahConcept?.shia) ? (
+                    <section className="overflow-x-auto rounded-lg border border-neutral-200 bg-white dark:border-neutral-800 dark:bg-black">
+                      <div className="p-5 sm:p-6">
+                        <SectionLabel>তুলনা টেবিল · Comparison table</SectionLabel>
+                      </div>
+                      <table className="w-full min-w-[560px] border-t border-neutral-200 text-sm dark:border-neutral-800">
+                        <thead>
+                          <tr className="border-b border-neutral-200 dark:border-neutral-800">
+                            <th className="px-5 py-3 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400">
+                              বিষয়
+                            </th>
+                            <th className="px-5 py-3 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400">
+                              সুন্নি দৃষ্টিভঙ্গি
+                            </th>
+                            <th className="px-5 py-3 text-left text-xs font-semibold text-neutral-500 dark:text-neutral-400">
+                              শিয়া দৃষ্টিভঙ্গি
+                            </th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {(
+                            [
+                              ["মূল তাফসীর ব্যাখ্যা", research.comparisonTable.mainExplanation],
+                              ["আলী/আহলুল বাইত সংযোগ", research.comparisonTable.aliConnection],
+                              ["মূল হাদিস প্রমাণ", research.comparisonTable.keyHadithEvidence],
+                              ["উইলায়াহ ধারণা", research.comparisonTable.wilayahConcept],
+                            ] as const
+                          ).map(([label, pair]) =>
+                            pair && (pair.sunni || pair.shia) ? (
+                              <tr
+                                key={label}
+                                className="border-b border-neutral-100 align-top last:border-0 dark:border-neutral-900"
+                              >
+                                <td className="px-5 py-3 text-xs font-semibold text-neutral-600 dark:text-neutral-300">
+                                  {label}
+                                </td>
+                                <td className="whitespace-pre-line px-5 py-3 text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
+                                  {pair.sunni || "—"}
+                                </td>
+                                <td className="whitespace-pre-line px-5 py-3 text-sm leading-relaxed text-neutral-700 dark:text-neutral-200">
+                                  {pair.shia || "—"}
+                                </td>
+                              </tr>
+                            ) : null,
+                          )}
+                        </tbody>
+                      </table>
+                    </section>
+                  ) : null}
+
+                  {(research.honestLimitations ?? []).length > 0 ? (
+                    <section className="rounded-lg border border-gold-600/30 bg-gold-50/50 p-5 sm:p-6 dark:border-gold-500/30 dark:bg-gold-500/5">
+                      <SectionLabel>সৎ সীমাবদ্ধতা · Honest limitations</SectionLabel>
+                      <div className="mt-3">
+                        <BulletList items={research.honestLimitations ?? []} />
+                      </div>
                     </section>
                   ) : null}
 
