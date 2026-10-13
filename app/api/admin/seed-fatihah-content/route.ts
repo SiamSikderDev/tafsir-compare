@@ -155,11 +155,8 @@ export async function POST(req: Request): Promise<Response> {
                 neutralExplanation: n.neutralExplanation,
               },
               references: n.references,
-              tafsirIds: [
-                ...sunniTafsirs.map((t) => t._id),
-                ...shiaTafsirs.map((t) => t._id),
-              ],
-              hadithIds,
+              // NOTE: hadithIds/tafsirIds live nested inside sunniView/shiaView
+              // (the schema has no top-level fields — strict mode drops them).
               confidence: "medium",
               reviewer: "Siam Sikder",
               status: "published",

@@ -13,7 +13,8 @@ const ayahParamSchema = z.coerce.number().int().min(1).max(300);
 
 /**
  * GET /api/verses/[surah]/[ayah]/hadiths — published hadiths linked to the
- * verse via its published research notes' hadithIds. Public, no-store.
+ * verse via its published research notes' nested view hadithIds
+ * (sunniView.hadithIds + shiaView.hadithIds). Public, no-store.
  */
 export async function GET(
   req: Request,
@@ -40,10 +41,22 @@ export async function GET(
       verseId: verse._id,
       status: "published",
     })
-      .select("hadithIds")
-      .lean()) as unknown as { hadithIds: Types.ObjectId[] }[];
+      .select("sunniView.hadithIds shiaView.hadithIds")
+      .lean()) as unknown as {
+      sunniView?: { hadithIds?: Types.ObjectId[] };
+      shiaView?: { hadithIds?: Types.ObjectId[] };
+    }[];
 
-    const ids = [...new Set(notes.flatMap((n) => n.hadithIds ?? []).map(String))];
+    const ids = [
+      ...new Set(
+        notes
+          .flatMap((n) => [
+            ...(n.sunniView?.hadithIds ?? []),
+            ...(n.shiaView?.hadithIds ?? []),
+          ])
+          .map(String),
+      ),
+    ];
     if (ids.length === 0) return ok([]);
 
     const hadiths = await Hadith.find({ _id: { $in: ids }, status: "published" })
