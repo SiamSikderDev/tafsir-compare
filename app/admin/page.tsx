@@ -34,6 +34,11 @@ const APPROVED_BATCHES: { key: string; label: string; blurb: string }[] = [
     label: "বাকারা ২:১৬–২:২০ প্রকাশ করুন (অনুমোদনের পর)",
     blurb: "২০টি তাফসীর, ৭টি হাদিস (সুন্নি + শিয়া), ১০টি তুলনামূলক নোট (বাংলা + ইংরেজি)।",
   },
+  {
+    key: "baqarah-2-21-25",
+    label: "বাকারা ২:২১–২:২৫ প্রকাশ করুন (অনুমোদনের পর)",
+    blurb: "২০টি তাফসীর, ৫টি হাদিস (সুন্নি + শিয়া), ১০টি তুলনামূলক নোট (বাংলা + ইংরেজি)।",
+  },
 ];
 import { formatDateTime, truncate } from "@/components/admin/utils";
 import {
