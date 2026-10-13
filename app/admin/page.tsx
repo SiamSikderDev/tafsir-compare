@@ -9,8 +9,6 @@ import { AuditLog } from "@/models/AuditLog";
 import { StatusBadge } from "@/components/admin/StatusBadge";
 import { SeedSurahsButton } from "@/components/admin/SeedSurahsButton";
 import { SeedVersesButton } from "@/components/admin/SeedVersesButton";
-import { SeedTafsirsButton } from "@/components/admin/SeedTafsirsButton";
-import { SeedFatihahContentButton } from "@/components/admin/SeedFatihahContentButton";
 import { SeedBatchButton } from "@/components/admin/SeedBatchButton";
 
 // Approved research batches, one click each. Add a new line per approved batch —
@@ -27,7 +25,6 @@ const APPROVED_BATCHES: { key: string; label: string; blurb: string }[] = [
     blurb: "২০টি তাফসীর, ৭টি হাদিস (সুন্নি + শিয়া), ১০টি তুলনামূলক নোট (বাংলা + ইংরেজি)।",
   },
 ];
-import { MigrateIndexesButton } from "@/components/admin/MigrateIndexesButton";
 import { formatDateTime, truncate } from "@/components/admin/utils";
 import {
   verseLabel,
@@ -179,35 +176,6 @@ export default async function AdminDashboardPage() {
             শেষ হবে।
           </p>
           <SeedVersesButton />
-        </section>
-      )}
-
-      {surahCount > 0 && (
-        <section className="mb-6 rounded-lg border border-amber-200 bg-amber-50 p-6 dark:border-amber-900 dark:bg-amber-950/40">
-          <h2 className="text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
-            আল-ফাতিহার তাফসীর প্রকাশ
-          </h2>
-          <p className="mb-4 mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-            গবেষণা-অনুমোদিত ২৮টি তাফসীর এন্ট্রি (ইবনে কাসীর + আল-মিযান,
-            বাংলা + ইংরেজি) ডাটাবেজে প্রকাশ করুন। নিরাপদ: আগে থেকে থাকলে
-            আপডেট হবে, নতুন হলে যোগ হবে।
-          </p>
-          <MigrateIndexesButton />
-          <SeedTafsirsButton />
-        </section>
-      )}
-
-      {surahCount > 0 && (
-        <section className="mb-6 rounded-lg border border-sky-200 bg-sky-50 p-6 dark:border-sky-900 dark:bg-sky-950/40">
-          <h2 className="text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
-            আল-ফাতিহার হাদিস + তুলনা + সূত্র
-          </h2>
-          <p className="mb-4 mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-            গবেষণা-অনুমোদিত ১০টি হাদিস (সুন্নি + শিয়া) ও ১৪টি তুলনামূলক গবেষণা নোট (বাংলা +
-            ইংরেজি) প্রকাশ করুন। শুধুমাত্র গবেষণা ড্রাফট অনুমোদনের পর ক্লিক
-            করুন। নিরাপদ: আগে থেকে থাকলে আপডেট হবে।
-          </p>
-          <SeedFatihahContentButton />
         </section>
       )}
 
