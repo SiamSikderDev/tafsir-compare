@@ -11,6 +11,7 @@ import { SeedSurahsButton } from "@/components/admin/SeedSurahsButton";
 import { SeedVersesButton } from "@/components/admin/SeedVersesButton";
 import { SeedTafsirsButton } from "@/components/admin/SeedTafsirsButton";
 import { SeedFatihahContentButton } from "@/components/admin/SeedFatihahContentButton";
+import { SeedBaqarahBatch1Button } from "@/components/admin/SeedBaqarahBatch1Button";
 import { MigrateIndexesButton } from "@/components/admin/MigrateIndexesButton";
 import { formatDateTime, truncate } from "@/components/admin/utils";
 import {
@@ -187,11 +188,26 @@ export default async function AdminDashboardPage() {
             আল-ফাতিহার হাদিস + তুলনা + সূত্র
           </h2>
           <p className="mb-4 mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-            গবেষণা-অনুমোদিত ৬টি হাদিস ও ১৪টি তুলনামূলক গবেষণা নোট (বাংলা +
+            গবেষণা-অনুমোদিত ১০টি হাদিস (সুন্নি + শিয়া) ও ১৪টি তুলনামূলক গবেষণা নোট (বাংলা +
             ইংরেজি) প্রকাশ করুন। শুধুমাত্র গবেষণা ড্রাফট অনুমোদনের পর ক্লিক
             করুন। নিরাপদ: আগে থেকে থাকলে আপডেট হবে।
           </p>
           <SeedFatihahContentButton />
+        </section>
+      )}
+
+      {surahCount > 0 && (
+        <section className="mb-6 rounded-lg border border-violet-200 bg-violet-50 p-6 dark:border-violet-900 dark:bg-violet-950/40">
+          <h2 className="text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
+            আল-বাকারা ২:১–২:৫ — তাফসীর + হাদিস + তুলনা
+          </h2>
+          <p className="mb-4 mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
+            গবেষণা-অনুমোদিত ২০টি তাফসীর এন্ট্রি, ৯টি হাদিস (সুন্নি + শিয়া)
+            ও ১০টি তুলনামূলক গবেষণা নোট (বাংলা + ইংরেজি) একসাথে প্রকাশ
+            করুন। শুধুমাত্র গবেষণা ড্রাফট অনুমোদনের পর ক্লিক করুন। নিরাপদ:
+            আগে থেকে থাকলে আপডেট হবে।
+          </p>
+          <SeedBaqarahBatch1Button />
         </section>
       )}
 
