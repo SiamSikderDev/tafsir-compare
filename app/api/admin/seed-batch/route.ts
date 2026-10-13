@@ -76,7 +76,7 @@ interface BundledNote {
 
 // Allowlist: only approved per-batch data files, e.g. baqarah-2-6-10.json.
 // This prevents path traversal — no arbitrary file reads.
-const BATCH_RE = /^baqarah-2-\d+-\d+$/;
+const BATCH_RE = /^(baqarah-2-\d+-\d+|fatihah-1-\d+-master)$/;
 
 /**
  * POST /api/admin/seed-batch — upsert one user-approved research batch

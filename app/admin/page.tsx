@@ -39,6 +39,11 @@ const APPROVED_BATCHES: { key: string; label: string; blurb: string }[] = [
     label: "বাকারা ২:২১–২:২৫ প্রকাশ করুন (অনুমোদনের পর)",
     blurb: "২০টি তাফসীর, ৫টি হাদিস (সুন্নি + শিয়া), ১০টি তুলনামূলক নোট (বাংলা + ইংরেজি)।",
   },
+  {
+    key: "fatihah-1-1-master",
+    label: "ফাতিহা ১:১ মাস্টার ফ্রেমওয়ার্ক প্রকাশ করুন (অনুমোদনের পর)",
+    blurb: "১৮টি তাফসীর (৫ সুন্নি + ৪ শিয়া), ১৪টি হাদিস, শান-এ-নুযূল, তুলনা টেবিল (বাংলা + ইংরেজি)।",
+  },
 ];
 import { formatDateTime, truncate } from "@/components/admin/utils";
 import {
