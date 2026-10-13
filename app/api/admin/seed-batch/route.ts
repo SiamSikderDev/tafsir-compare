@@ -22,6 +22,8 @@ interface BundledTafsir {
   summary: string;
   sourceUrl: string;
   keyPoints: string[];
+  mentionsAliAhlulBayt?: boolean;
+  mentionNote?: string;
 }
 
 interface BundledHadith {
@@ -31,12 +33,19 @@ interface BundledHadith {
   book: string;
   hadithNumber: string;
   narrator: string;
+  arabicText?: string;
   bengaliTranslation: string;
   englishTranslation: string;
   grading: string;
   gradingSource: string;
   sourceUrl: string;
   notes: string;
+  relevanceNote?: string;
+}
+
+interface SchoolPair {
+  sunni: string;
+  shia: string;
 }
 
 interface BundledNote {
@@ -49,6 +58,14 @@ interface BundledNote {
   agreements: string[];
   differences: string[];
   linguisticNotes: string[];
+  shanENuzul?: { sunni: string; shia: string };
+  comparisonTable?: {
+    mainExplanation: SchoolPair;
+    aliConnection: SchoolPair;
+    keyHadithEvidence: SchoolPair;
+    wilayahConcept: SchoolPair;
+  };
+  honestLimitations?: string[];
   references: {
     type: "tafsir" | "hadith" | "book" | "article" | "dictionary" | "manuscript";
     title: string;
@@ -129,6 +146,10 @@ export async function POST(req: Request): Promise<Response> {
               summary: r.summary,
               sourceUrl: r.sourceUrl,
               keyPoints: r.keyPoints,
+              ...(r.mentionsAliAhlulBayt !== undefined
+                ? { mentionsAliAhlulBayt: r.mentionsAliAhlulBayt }
+                : {}),
+              mentionNote: r.mentionNote || "",
               status: "published",
               verifiedBy: "Siam Sikder",
             },
@@ -156,12 +177,14 @@ export async function POST(req: Request): Promise<Response> {
             book: h.book || undefined,
             hadithNumber: h.hadithNumber,
             narrator: h.narrator,
+            arabicText: h.arabicText || "",
             bengaliTranslation: h.bengaliTranslation,
             englishTranslation: h.englishTranslation,
             grading: h.grading,
             gradingSource: h.gradingSource,
             sourceUrl: h.sourceUrl,
             notes: h.notes,
+            relevanceNote: h.relevanceNote || "",
             status: "published",
             verifiedBy: "Siam Sikder",
           },
@@ -236,6 +259,9 @@ export async function POST(req: Request): Promise<Response> {
                 differences: n.differences,
                 neutralExplanation: n.neutralExplanation,
               },
+              ...(n.comparisonTable ? { comparisonTable: n.comparisonTable } : {}),
+              ...(n.shanENuzul ? { shanENuzul: n.shanENuzul } : {}),
+              honestLimitations: n.honestLimitations ?? [],
               references: n.references,
               confidence: "medium",
               reviewer: "Siam Sikder",

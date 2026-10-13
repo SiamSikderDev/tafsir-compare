@@ -18,6 +18,8 @@ export interface ITafsir extends Document {
   publisher?: string;
   publicationYear?: number;
   verifiedBy?: string;
+  mentionsAliAhlulBayt?: boolean;
+  mentionNote?: string;
   status: PublishStatus;
   createdAt: Date;
   updatedAt: Date;
@@ -49,6 +51,8 @@ const TafsirSchema = new Schema<ITafsir>(
     publisher: { type: String, trim: true, maxlength: 200 },
     publicationYear: { type: Number, min: 600, max: 2100 },
     verifiedBy: { type: String, trim: true, maxlength: 200 },
+    mentionsAliAhlulBayt: { type: Boolean, default: undefined, index: true },
+    mentionNote: { type: String, default: "" },
     status: {
       type: String,
       enum: ["draft", "review", "published"],

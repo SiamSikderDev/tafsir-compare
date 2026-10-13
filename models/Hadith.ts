@@ -15,6 +15,7 @@ export interface IHadith extends Document {
   gradingSource?: string;
   sourceUrl?: string;
   notes?: string;
+  relevanceNote?: string;
   status: PublishStatus;
   createdAt: Date;
   updatedAt: Date;
@@ -40,6 +41,7 @@ const HadithSchema = new Schema<IHadith>(
     gradingSource: { type: String, trim: true, maxlength: 300 },
     sourceUrl: { type: String, trim: true, maxlength: 2000 },
     notes: { type: String, default: "" },
+    relevanceNote: { type: String, default: "" },
     status: {
       type: String,
       enum: ["draft", "review", "published"],

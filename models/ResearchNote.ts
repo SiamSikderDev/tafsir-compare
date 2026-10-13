@@ -35,6 +35,23 @@ export interface IComparison {
   neutralExplanation?: string;
 }
 
+export interface ISchoolPair {
+  sunni: string;
+  shia: string;
+}
+
+export interface IShanENuzul {
+  sunni: string;
+  shia: string;
+}
+
+export interface IComparisonTable {
+  mainExplanation: ISchoolPair;
+  aliConnection: ISchoolPair;
+  keyHadithEvidence: ISchoolPair;
+  wilayahConcept: ISchoolPair;
+}
+
 export interface IResearchNote extends Document {
   verseId: Types.ObjectId;
   title: string;
@@ -45,6 +62,9 @@ export interface IResearchNote extends Document {
   sunniView: ISchoolView;
   shiaView: ISchoolView;
   comparison: IComparison;
+  comparisonTable?: IComparisonTable;
+  shanENuzul?: IShanENuzul;
+  honestLimitations: string[];
   references: IEmbeddedReference[];
   confidence: Confidence;
   reviewer?: string;
@@ -58,6 +78,32 @@ const SchoolViewSchema = new Schema<ISchoolView>(
     summary: { type: String, default: "" },
     tafsirIds: [{ type: Schema.Types.ObjectId, ref: "Tafsir" }],
     hadithIds: [{ type: Schema.Types.ObjectId, ref: "Hadith" }],
+  },
+  { _id: false },
+);
+
+const SchoolPairSchema = new Schema<ISchoolPair>(
+  {
+    sunni: { type: String, default: "" },
+    shia: { type: String, default: "" },
+  },
+  { _id: false },
+);
+
+const ComparisonTableSchema = new Schema<IComparisonTable>(
+  {
+    mainExplanation: { type: SchoolPairSchema, default: () => ({}) },
+    aliConnection: { type: SchoolPairSchema, default: () => ({}) },
+    keyHadithEvidence: { type: SchoolPairSchema, default: () => ({}) },
+    wilayahConcept: { type: SchoolPairSchema, default: () => ({}) },
+  },
+  { _id: false },
+);
+
+const ShanENuzulSchema = new Schema<IShanENuzul>(
+  {
+    sunni: { type: String, default: "" },
+    shia: { type: String, default: "" },
   },
   { _id: false },
 );
@@ -107,6 +153,9 @@ const ResearchNoteSchema = new Schema<IResearchNote>(
     sunniView: { type: SchoolViewSchema, default: () => ({}) },
     shiaView: { type: SchoolViewSchema, default: () => ({}) },
     comparison: { type: ComparisonSchema, default: () => ({}) },
+    comparisonTable: { type: ComparisonTableSchema, default: undefined },
+    shanENuzul: { type: ShanENuzulSchema, default: undefined },
+    honestLimitations: { type: [String], default: [] },
     references: { type: [EmbeddedReferenceSchema], default: [] },
     confidence: {
       type: String,
