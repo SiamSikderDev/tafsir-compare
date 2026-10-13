@@ -6,13 +6,18 @@ import { useRouter } from "next/navigation";
 type Phase = "idle" | "running" | "done";
 
 /**
- * Publishes the user-approved Al-Baqarah 2:1–2:5 batch — 20 tafsirs
- * (Ibn Kathir + Al-Mizan, BN+EN), 9 hadiths (Sunni+Shia) and 10 per-verse
- * comparison research notes (BN+EN) — with a single POST to
- * /api/admin/seed-baqarah-batch-1. Safe to re-run (server upserts
- * idempotently). Only click after the research draft is approved.
+ * Generic one-click publisher for an approved research batch.
+ * POSTs { batch } to /api/admin/seed-batch, which upserts that batch's
+ * tafsirs + hadiths + comparison notes idempotently. Only click after the
+ * batch's research draft is approved.
  */
-export function SeedBaqarahBatch1Button() {
+export function SeedBatchButton({
+  batchKey,
+  label,
+}: {
+  batchKey: string;
+  label: string;
+}) {
   const [phase, setPhase] = useState<Phase>("idle");
   const [result, setResult] = useState<{
     tafsirs?: { upserted?: number; matched?: number };
@@ -26,7 +31,11 @@ export function SeedBaqarahBatch1Button() {
     setPhase("running");
     setResult(null);
     try {
-      const res = await fetch("/api/admin/seed-baqarah-batch-1", { method: "POST" });
+      const res = await fetch("/api/admin/seed-batch", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ batch: batchKey }),
+      });
       const data = (await res.json()) as {
         tafsirs?: { upserted?: number; matched?: number };
         hadiths?: { upserted?: number; matched?: number };
@@ -50,7 +59,7 @@ export function SeedBaqarahBatch1Button() {
         disabled={phase === "running"}
         className="inline-flex h-9 items-center rounded-full bg-neutral-900 px-4 text-sm font-medium text-white transition hover:bg-neutral-700 disabled:cursor-not-allowed disabled:opacity-60 dark:bg-neutral-50 dark:text-neutral-900 dark:hover:bg-neutral-200"
       >
-        {phase === "running" ? "প্রকাশ হচ্ছে…" : "বাকারা ২:১–২:৫ প্রকাশ করুন (অনুমোদনের পর)"}
+        {phase === "running" ? "প্রকাশ হচ্ছে…" : label}
       </button>
       {phase === "done" && result && (
         <p role="status" className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">

@@ -1,15 +1,16 @@
 export const dynamic = "force-dynamic";
 
+import { readFileSync } from "fs";
+import { join, basename } from "path";
 import { connectDB } from "@/lib/db";
 import { requireRole } from "@/lib/authz";
 import { writeAudit } from "@/lib/audit";
-import { handleRouteError, ok } from "@/lib/api-helpers";
+import { handleRouteError, ok, fail } from "@/lib/api-helpers";
 import { Verse } from "@/models/Verse";
 import { Tafsir } from "@/models/Tafsir";
 import { Hadith } from "@/models/Hadith";
 import { ResearchNote } from "@/models/ResearchNote";
 import { Types } from "mongoose";
-import DATA from "@/scripts/data/baqarah-2-1-5.json";
 
 interface BundledTafsir {
   surah: number;
@@ -56,25 +57,42 @@ interface BundledNote {
   }[];
 }
 
-const SURAH = 2;
-const TAFSIRS = (DATA as { tafsirs: BundledTafsir[] }).tafsirs;
-const HADITHS = (DATA as { hadiths: BundledHadith[] }).hadiths;
-const NOTES = (DATA as { researchNotes: BundledNote[] }).researchNotes;
+// Allowlist: only approved per-batch data files, e.g. baqarah-2-6-10.json.
+// This prevents path traversal — no arbitrary file reads.
+const BATCH_RE = /^baqarah-2-\d+-\d+$/;
 
 /**
- * POST /api/admin/seed-baqarah-batch-1 — upsert the user-approved Al-Baqarah
- * 2:1–2:5 batch: tafsirs (Ibn Kathir + Al-Mizan, BN+EN), hadiths (Sunni+Shia),
- * and per-verse comparison research notes (BN+EN) from the bundled JSON.
+ * POST /api/admin/seed-batch — upsert one user-approved research batch
+ * (tafsirs + hadiths + per-verse comparison notes) from its bundled JSON
+ * in scripts/data/<batch>.json. Body: { "batch": "baqarah-2-6-10" }.
  * Admin only, idempotent, audit-logged. Research notes link tafsirIds and
  * hadithIds nested inside sunniView/shiaView (the schema has no top-level
- * fields). No body required.
+ * fields). Only click after the batch's research draft is approved.
  */
 export async function POST(req: Request): Promise<Response> {
   try {
     const ctx = await requireRole("admin");
+    const { batch } = (await req.json().catch(() => ({}))) as { batch?: string };
+    if (!batch || !BATCH_RE.test(basename(batch))) {
+      return fail(400, "Unknown or unapproved batch.");
+    }
+    const file = join(process.cwd(), "scripts", "data", `${batch}.json`);
+    let DATA: { tafsirs: BundledTafsir[]; hadiths: BundledHadith[]; researchNotes: BundledNote[] };
+    try {
+      DATA = JSON.parse(readFileSync(file, "utf8"));
+    } catch {
+      return fail(404, "Batch data file not found.");
+    }
+
+    const TAFSIRS = DATA.tafsirs ?? [];
+    const HADITHS = DATA.hadiths ?? [];
+    const NOTES = DATA.researchNotes ?? [];
+    const SURAH = TAFSIRS[0]?.surah ?? 2;
+    if (TAFSIRS.length === 0) return fail(400, "Batch has no tafsir entries.");
+
     await connectDB();
 
-    // Resolve verse ObjectIds for surah 2, ayahs 1–5.
+    // Resolve verse ObjectIds for this batch's ayahs.
     const ayahs = [...new Set([...TAFSIRS.map((t) => t.ayah), ...NOTES.map((n) => n.ayah)])];
     const verses = (await Verse.find({
       surahNumber: SURAH,
@@ -151,7 +169,13 @@ export async function POST(req: Request): Promise<Response> {
         upsert: true,
       },
     }));
-    const hadithResult = await Hadith.bulkWrite(hadithOps, { ordered: false });
+    let hadithsUpserted = 0;
+    let hadithsMatched = 0;
+    if (hadithOps.length > 0) {
+      const r = await Hadith.bulkWrite(hadithOps, { ordered: false });
+      hadithsUpserted = r.upsertedCount;
+      hadithsMatched = r.matchedCount;
+    }
     const allHadiths = (await Hadith.find({
       $or: HADITHS.map((h) => ({
         collectionName: h.collectionName,
@@ -232,14 +256,10 @@ export async function POST(req: Request): Promise<Response> {
 
     await writeAudit(ctx, {
       action: "seed",
-      collectionName: "baqarah-batch-1",
+      collectionName: `batch-${batch}`,
       after: {
         tafsirs: { total: TAFSIRS.length, upserted: tafsirsUpserted, matched: tafsirsMatched, missing: missingTafsir },
-        hadiths: {
-          total: HADITHS.length,
-          upserted: hadithResult.upsertedCount,
-          matched: hadithResult.matchedCount,
-        },
+        hadiths: { total: HADITHS.length, upserted: hadithsUpserted, matched: hadithsMatched },
         notes: { total: NOTES.length, upserted: notesUpserted, matched: notesMatched, missing: missingNotes },
       },
       req,
@@ -247,11 +267,7 @@ export async function POST(req: Request): Promise<Response> {
 
     return ok({
       tafsirs: { total: TAFSIRS.length, upserted: tafsirsUpserted, matched: tafsirsMatched, missing: missingTafsir },
-      hadiths: {
-        total: HADITHS.length,
-        upserted: hadithResult.upsertedCount,
-        matched: hadithResult.matchedCount,
-      },
+      hadiths: { total: HADITHS.length, upserted: hadithsUpserted, matched: hadithsMatched },
       notes: { total: NOTES.length, upserted: notesUpserted, matched: notesMatched, missing: missingNotes },
     });
   } catch (err) {

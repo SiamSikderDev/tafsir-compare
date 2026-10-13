@@ -11,7 +11,22 @@ import { SeedSurahsButton } from "@/components/admin/SeedSurahsButton";
 import { SeedVersesButton } from "@/components/admin/SeedVersesButton";
 import { SeedTafsirsButton } from "@/components/admin/SeedTafsirsButton";
 import { SeedFatihahContentButton } from "@/components/admin/SeedFatihahContentButton";
-import { SeedBaqarahBatch1Button } from "@/components/admin/SeedBaqarahBatch1Button";
+import { SeedBatchButton } from "@/components/admin/SeedBatchButton";
+
+// Approved research batches, one click each. Add a new line per approved batch —
+// no new routes needed. The batch key must match scripts/data/<key>.json.
+const APPROVED_BATCHES: { key: string; label: string; blurb: string }[] = [
+  {
+    key: "baqarah-2-1-5",
+    label: "বাকারা ২:১–২:৫ প্রকাশ করুন (অনুমোদনের পর)",
+    blurb: "২০টি তাফসীর, ৯টি হাদিস (সুন্নি + শিয়া), ১০টি তুলনামূলক নোট (বাংলা + ইংরেজি)।",
+  },
+  {
+    key: "baqarah-2-6-10",
+    label: "বাকারা ২:৬–২:১০ প্রকাশ করুন (অনুমোদনের পর)",
+    blurb: "২০টি তাফসীর, ৭টি হাদিস (সুন্নি + শিয়া), ১০টি তুলনামূলক নোট (বাংলা + ইংরেজি)।",
+  },
+];
 import { MigrateIndexesButton } from "@/components/admin/MigrateIndexesButton";
 import { formatDateTime, truncate } from "@/components/admin/utils";
 import {
@@ -199,15 +214,21 @@ export default async function AdminDashboardPage() {
       {surahCount > 0 && (
         <section className="mb-6 rounded-lg border border-violet-200 bg-violet-50 p-6 dark:border-violet-900 dark:bg-violet-950/40">
           <h2 className="text-base font-semibold tracking-tight text-neutral-900 dark:text-neutral-50">
-            আল-বাকারা ২:১–২:৫ — তাফসীর + হাদিস + তুলনা
+            গবেষণা ব্যাচ প্রকাশ
           </h2>
           <p className="mb-4 mt-1 max-w-2xl text-sm text-neutral-600 dark:text-neutral-400">
-            গবেষণা-অনুমোদিত ২০টি তাফসীর এন্ট্রি, ৯টি হাদিস (সুন্নি + শিয়া)
-            ও ১০টি তুলনামূলক গবেষণা নোট (বাংলা + ইংরেজি) একসাথে প্রকাশ
-            করুন। শুধুমাত্র গবেষণা ড্রাফট অনুমোদনের পর ক্লিক করুন। নিরাপদ:
-            আগে থেকে থাকলে আপডেট হবে।
+            গবেষণা-অনুমোদিত ব্যাচগুলো এক ক্লিকে প্রকাশ করুন। শুধুমাত্র
+            সংশ্লিষ্ট গবেষণা ড্রাফট অনুমোদনের পর ক্লিক করুন। নিরাপদ: আগে
+            থেকে থাকলে আপডেট হবে।
           </p>
-          <SeedBaqarahBatch1Button />
+          <div className="flex flex-col gap-4">
+            {APPROVED_BATCHES.map((b) => (
+              <div key={b.key}>
+                <p className="mb-2 text-sm text-neutral-600 dark:text-neutral-400">{b.blurb}</p>
+                <SeedBatchButton batchKey={b.key} label={b.label} />
+              </div>
+            ))}
+          </div>
         </section>
       )}
 
